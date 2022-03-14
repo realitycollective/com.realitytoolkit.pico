@@ -1,7 +1,7 @@
 {
-  "name": "com.realitytoolkit.UPMTEMPLATE",
-  "displayName": "RealityToolkit.UPMTEMPLATE",
-  "description": "The UPMTEMPLATE framework of the Reality Toolkit by the Reality Collective",
+  "name": "com.realitytoolkit.pico",
+  "displayName": "RealityToolkit.pico",
+  "description": "The pico framework of the Reality Toolkit by the Reality Collective",
   "keywords": [
     "VR",
     "AR",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/realitycollective/com.realitytoolkit.UPMTEMPLATE"
+    "url": "git+https://github.com/realitycollective/com.realitytoolkit.pico"
   },
   "author": {
     "name": "Reality Collective",

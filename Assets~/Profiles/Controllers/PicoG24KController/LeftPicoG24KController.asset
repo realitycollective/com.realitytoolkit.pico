@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: LeftPicoG24KController
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: 07b23b0b-1be1-4ac5-942e-0fe3bc65a260
+  handedness: 1
+  visualizationProfile: {fileID: 11400000, guid: fe125eaaf5547684d8506b794c5a6016,
+    type: 2}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: 6b245c09c96a948499c6e03a12213ec1, type: 2}
+  - {fileID: 11400000, guid: cef45cf68144cb94d99652a76c9fcfcb, type: 2}
+  - {fileID: 11400000, guid: 1fdc26adcd9687e4a982dcb765ba7b04, type: 2}
+  - {fileID: 11400000, guid: 7cbd0c8f71621c540b6e2131129e96da, type: 2}
+  - {fileID: 11400000, guid: 5dd5894f4d84e5f4c92191213aa848db, type: 2}
+  - {fileID: 11400000, guid: 384ddbd5f740873489df5e2291e4c091, type: 2}

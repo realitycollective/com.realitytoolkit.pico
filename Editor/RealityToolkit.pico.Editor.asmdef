@@ -1,0 +1,20 @@
+{
+    "name": "RealityToolkit.Pico.Editor",
+    "rootNamespace": "RealityToolkit.Pico.Editor",
+    "references": [
+        "GUID:f3241d040533491e8a1e2714b27c3111",
+        "GUID:e67d30660ec243e4836aac191d3f36fb",
+        "GUID:47edcdc3718357b4585cd9edf119e1e0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

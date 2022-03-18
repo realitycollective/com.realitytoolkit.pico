@@ -8,8 +8,8 @@ using XRTK.Definitions.Controllers;
 using XRTK.Definitions.Devices;
 using XRTK.Definitions.Utilities;
 using XRTK.Extensions;
-using XRTK.Interfaces.Providers.Controllers;
-using XRTK.Providers.Controllers;
+using XRTK.Interfaces.InputSystem.Providers.Controllers;
+using XRTK.Services.InputSystem.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers
 {

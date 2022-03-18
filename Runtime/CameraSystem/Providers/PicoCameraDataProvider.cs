@@ -6,7 +6,7 @@ using Unity.XR.PXR;
 using UnityEngine;
 using XRTK.Attributes;
 using XRTK.Interfaces.CameraSystem;
-using XRTK.Providers.CameraSystem;
+using XRTK.Services.CameraSystem.Providers;
 
 namespace RealityToolkit.Pico.CameraSystem.Providers
 {

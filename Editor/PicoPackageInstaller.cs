@@ -20,13 +20,13 @@ namespace RealityToolkit.Pico.Editor
             EditorApplication.delayCall += CheckPackage;
         }
 
-        [MenuItem("Reality Toolkit/Packages/Install Pico Package Assets...", true)]
+        [MenuItem(MixedRealityPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...", true)]
         private static bool ImportPackageAssetsValidation()
         {
             return !Directory.Exists($"{DefaultPath}{Path.DirectorySeparatorChar}");
         }
 
-        [MenuItem("Reality Toolkit/Packages/Install Pico Package Assets...")]
+        [MenuItem(MixedRealityPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...")]
         private static void ImportPackageAssets()
         {
             EditorPreferences.Set($"{nameof(PicoPackageInstaller)}.Assets", false);

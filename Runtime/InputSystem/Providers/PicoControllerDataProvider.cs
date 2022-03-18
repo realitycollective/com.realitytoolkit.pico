@@ -11,7 +11,7 @@ using XRTK.Attributes;
 using XRTK.Definitions.Devices;
 using XRTK.Definitions.Utilities;
 using XRTK.Interfaces.InputSystem;
-using XRTK.Providers.Controllers;
+using XRTK.Services.InputSystem.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Providers
 {

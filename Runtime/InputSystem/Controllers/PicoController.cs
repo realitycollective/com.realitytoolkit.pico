@@ -131,7 +131,7 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
                         UpdateDualAxisInteractionMapping(interactionMapping, inputDevice);
                         break;
                     case DeviceInputType.SpatialPointer:
-                        UpdateSpatialPointer(interactionMapping);
+                        UpdateSpatialPointerPoseMapping(interactionMapping);
                         break;
                     default:
                         Debug.LogError($"Input {interactionMapping.InputType} is not handled for controller {GetType().Name} - {ControllerHandedness}.");

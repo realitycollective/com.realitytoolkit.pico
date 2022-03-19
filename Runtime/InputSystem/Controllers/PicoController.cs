@@ -1,11 +1,11 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityToolkit.Services.InputSystem.Controllers.UnityXR;
 using XRTK.Definitions.Controllers;
 using XRTK.Definitions.Devices;
 using XRTK.Definitions.Utilities;
 using XRTK.Interfaces.InputSystem.Providers.Controllers;
-using XRTK.Services.InputSystem.Controllers.UnityXR;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers
 {

@@ -27,16 +27,31 @@ namespace RealityToolkit.Pico.InputSystem.Providers
             : base(name, priority, profile, parentService) { }
 
         private readonly Dictionary<Handedness, PicoController> activeControllers = new Dictionary<Handedness, PicoController>();
+        private bool allInOneHeadsetButtonsControllerEnabled;
+
+        /// <inheritdoc />
+        public override void Initialize()
+        {
+            if (!Application.isPlaying)
+            {
+                return;
+            }
+
+            allInOneHeadsetButtonsControllerEnabled = TryGetControllerMappingProfile(typeof(PicoAllInOneHeadsetButtonsController), Handedness.None, out _);
+        }
 
         /// <inheritdoc />
         public override void Update()
         {
-            // The all-in-one controller is located on the Pico headset itself and always available.
-            // It also doesn't have a handedness associated.
-            var headsetController = GetOrAddController(Handedness.None, typeof(PicoAllInOneHeadsetButtonsController));
-            if (headsetController != null)
+            if (allInOneHeadsetButtonsControllerEnabled)
             {
-                headsetController.UpdateController();
+                // The all-in-one controller is located on the Pico headset itself and always available.
+                // It also doesn't have a handedness associated.
+                var headsetController = GetOrAddController(Handedness.None, typeof(PicoAllInOneHeadsetButtonsController));
+                if (headsetController != null)
+                {
+                    headsetController.UpdateController();
+                }
             }
 
             // We allow one type of controller per hand, check if there is a controller connected
@@ -146,7 +161,7 @@ namespace RealityToolkit.Pico.InputSystem.Providers
             }
             catch (Exception ex)
             {
-                UnityEngine.Debug.LogError($"Failed to create {type.Name}!\n{ex}");
+                Debug.LogError($"Failed to create {type.Name}!\n{ex}");
                 return null;
             }
         }

@@ -3,7 +3,6 @@
     "rootNamespace": "RealityToolkit.Pico",
     "references": [
         "GUID:f3241d040533491e8a1e2714b27c3111",
-        "GUID:f9250dc5434148a5be0081063311c787",
         "GUID:781d3f72e45b2ed46b35a96cb2736482"
     ],
     "includePlatforms": [

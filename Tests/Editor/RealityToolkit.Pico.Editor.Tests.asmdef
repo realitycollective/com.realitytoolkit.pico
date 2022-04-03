@@ -1,9 +1,11 @@
 {
     "name": "RealityToolkit.pico.Editor.Tests",
+    "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "RealityToolkit.pico"
+        "RealityToolkit.Pico",
+        "RealityToolkit.Pico.Editor"
     ],
     "includePlatforms": [
         "Editor"

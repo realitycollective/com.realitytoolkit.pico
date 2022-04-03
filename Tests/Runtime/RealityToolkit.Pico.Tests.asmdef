@@ -1,8 +1,10 @@
 {
     "name": "RealityToolkit.pico.Tests",
+    "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "RealityToolkit.Pico"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

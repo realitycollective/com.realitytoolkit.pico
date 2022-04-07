@@ -43,10 +43,10 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         /// </summary>
         protected virtual IReadOnlyDictionary<string, InputFeatureUsage<Vector2>> DualAxisInputFeatureUsageMap { get; set; } = new Dictionary<string, InputFeatureUsage<Vector2>>();
 
-        /// <summary>
-        /// The controller's pose in world space.
-        /// </summary>
-        protected MixedRealityPose ControllerPose { get; set; }
+        ///// <summary>
+        ///// The controller's pose in world space.
+        ///// </summary>
+        //protected MixedRealityPose ControllerPose { get; set; }
 
         /// <summary>
         /// The controller's pointer pose in world space.
@@ -114,10 +114,10 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
             IsPositionApproximate = false;
 
             var updatedControllerPose = new MixedRealityPose(position, rotation);
-            if (updatedControllerPose != ControllerPose)
+            if (updatedControllerPose != Pose)
             {
-                ControllerPose = updatedControllerPose;
-                InputSystem?.RaiseSourcePoseChanged(InputSource, this, ControllerPose);
+                Pose = updatedControllerPose;
+                InputSystem?.RaiseSourcePoseChanged(InputSource, this, Pose);
             }
         }
 
@@ -126,7 +126,7 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         /// </summary>
         protected virtual void UpdateSpatialPointerPose()
         {
-            SpatialPointerPose = ControllerPose;
+            SpatialPointerPose = Pose;
         }
 
         /// <summary>

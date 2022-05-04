@@ -3,9 +3,9 @@
 
 using System.IO;
 using UnityEditor;
-using XRTK.Editor;
-using XRTK.Editor.Utilities;
-using XRTK.Extensions;
+using RealityToolkit.Editor;
+using RealityToolkit.Editor.Utilities;
+using RealityToolkit.Extensions;
 
 namespace RealityToolkit.Pico.Editor
 {

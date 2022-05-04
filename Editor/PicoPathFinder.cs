@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using XRTK.Editor.Utilities;
+using RealityToolkit.Editor.Utilities;
 
 namespace RealityToolkit.Pico.Editor
 {

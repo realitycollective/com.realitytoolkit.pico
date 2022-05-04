@@ -2,8 +2,8 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityToolkit.Pico.InputSystem.Controllers;
-using XRTK.Definitions.Controllers;
-using XRTK.Definitions.Utilities;
+using RealityToolkit.Definitions.Controllers;
+using RealityToolkit.Definitions.Utilities;
 
 namespace RealityToolkit.Pico.InputSystem.Profiles
 {

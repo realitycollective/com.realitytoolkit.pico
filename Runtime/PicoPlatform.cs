@@ -4,8 +4,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using XRTK.Definitions.Platforms;
-using XRTK.Interfaces;
+using RealityToolkit.Definitions.Platforms;
+using RealityToolkit.Interfaces;
 
 namespace RealityToolkit.Pico
 {

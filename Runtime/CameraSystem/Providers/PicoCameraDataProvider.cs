@@ -4,9 +4,9 @@
 using RealityToolkit.Pico.CameraSystem.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;
-using XRTK.Attributes;
-using XRTK.Interfaces.CameraSystem;
-using XRTK.Services.CameraSystem.Providers;
+using RealityToolkit.Attributes;
+using RealityToolkit.Interfaces.CameraSystem;
+using RealityToolkit.Services.CameraSystem.Providers;
 
 namespace RealityToolkit.Pico.CameraSystem.Providers
 {

@@ -3,7 +3,7 @@
 
 using RealityToolkit.Pico.InputSystem.Profiles;
 using UnityEditor;
-using XRTK.Editor.Profiles.InputSystem.Controllers;
+using RealityToolkit.Editor.Profiles.InputSystem.Controllers;
 
 namespace RealityToolkit.Pico.Editor
 {

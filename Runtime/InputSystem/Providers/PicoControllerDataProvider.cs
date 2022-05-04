@@ -7,11 +7,11 @@ using System;
 using System.Collections.Generic;
 using Unity.XR.PXR;
 using UnityEngine;
-using XRTK.Attributes;
-using XRTK.Definitions.Devices;
-using XRTK.Definitions.Utilities;
-using XRTK.Interfaces.InputSystem;
-using XRTK.Services.InputSystem.Controllers;
+using RealityToolkit.Attributes;
+using RealityToolkit.Definitions.Devices;
+using RealityToolkit.Definitions.Utilities;
+using RealityToolkit.Interfaces.InputSystem;
+using RealityToolkit.Services.InputSystem.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Providers
 {

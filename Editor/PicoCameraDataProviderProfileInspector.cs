@@ -4,8 +4,8 @@
 using RealityToolkit.Pico.CameraSystem.Profiles;
 using UnityEditor;
 using UnityEngine;
-using XRTK.Editor.Extensions;
-using XRTK.Editor.Profiles.CameraSystem;
+using RealityToolkit.Editor.Extensions;
+using RealityToolkit.Editor.Profiles.CameraSystem;
 
 namespace RealityToolkit.Pico.Editor
 {

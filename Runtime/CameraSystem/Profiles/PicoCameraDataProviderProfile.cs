@@ -3,7 +3,7 @@
 
 using Unity.XR.PXR;
 using UnityEngine;
-using XRTK.Definitions.CameraSystem;
+using RealityToolkit.Definitions.CameraSystem;
 
 namespace RealityToolkit.Pico.CameraSystem.Profiles
 {

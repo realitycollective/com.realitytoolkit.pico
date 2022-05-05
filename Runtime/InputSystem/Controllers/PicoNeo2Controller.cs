@@ -4,10 +4,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using XRTK.Definitions.Controllers;
-using XRTK.Definitions.Devices;
-using XRTK.Definitions.Utilities;
-using XRTK.Interfaces.InputSystem.Providers.Controllers;
+using RealityToolkit.Definitions.Controllers;
+using RealityToolkit.Definitions.Devices;
+using RealityToolkit.Definitions.Utilities;
+using RealityToolkit.Interfaces.InputSystem.Providers.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers
 {

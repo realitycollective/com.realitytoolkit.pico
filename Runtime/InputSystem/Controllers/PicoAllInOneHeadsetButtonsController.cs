@@ -2,11 +2,11 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using XRTK.Definitions.Controllers;
-using XRTK.Definitions.Devices;
-using XRTK.Definitions.Utilities;
-using XRTK.Extensions;
-using XRTK.Interfaces.InputSystem.Providers.Controllers;
+using RealityToolkit.Definitions.Controllers;
+using RealityToolkit.Definitions.Devices;
+using RealityToolkit.Definitions.Utilities;
+using RealityToolkit.Extensions;
+using RealityToolkit.Interfaces.InputSystem.Providers.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers
 {

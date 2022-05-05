@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using Unity.XR.PXR;
-using XRTK.Definitions.Utilities;
+using RealityToolkit.Definitions.Utilities;
 
 namespace RealityToolkit.Pico.Extensions
 {

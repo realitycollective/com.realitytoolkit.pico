@@ -3,7 +3,7 @@
 
 using RealityToolkit.Pico.InputSystem.Controllers;
 using RealityToolkit.Definitions.Controllers;
-using RealityToolkit.Definitions.Utilities;
+using RealityCollective.Definitions.Utilities;
 
 namespace RealityToolkit.Pico.InputSystem.Profiles
 {

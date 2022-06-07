@@ -1,17 +1,17 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityCollective.Definitions.Utilities;
+using RealityToolkit.Attributes;
+using RealityToolkit.Definitions.Devices;
+using RealityToolkit.Interfaces.InputSystem;
 using RealityToolkit.Pico.InputSystem.Controllers;
 using RealityToolkit.Pico.InputSystem.Profiles;
+using RealityToolkit.Services.InputSystem.Controllers;
 using System;
 using System.Collections.Generic;
 using Unity.XR.PXR;
 using UnityEngine;
-using RealityToolkit.Attributes;
-using RealityToolkit.Definitions.Devices;
-using RealityToolkit.Definitions.Utilities;
-using RealityToolkit.Interfaces.InputSystem;
-using RealityToolkit.Services.InputSystem.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Providers
 {

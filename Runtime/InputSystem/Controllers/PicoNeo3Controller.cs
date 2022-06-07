@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.Definitions.Utilities;
+using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Interfaces.InputSystem.Providers.Controllers;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers

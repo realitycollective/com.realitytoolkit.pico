@@ -1,12 +1,12 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using RealityToolkit.Pico.CameraSystem.Profiles;
-using Unity.XR.PXR;
-using UnityEngine;
 using RealityToolkit.Attributes;
 using RealityToolkit.Interfaces.CameraSystem;
+using RealityToolkit.Pico.CameraSystem.Profiles;
 using RealityToolkit.Services.CameraSystem.Providers;
+using Unity.XR.PXR;
+using UnityEngine;
 
 namespace RealityToolkit.Pico.CameraSystem.Providers
 {

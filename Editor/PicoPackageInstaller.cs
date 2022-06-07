@@ -1,11 +1,12 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System.IO;
-using UnityEditor;
+using RealityCollective.Editor.Utilities;
+using RealityCollective.Extensions;
 using RealityToolkit.Editor;
 using RealityToolkit.Editor.Utilities;
-using RealityToolkit.Extensions;
+using System.IO;
+using UnityEditor;
 
 namespace RealityToolkit.Pico.Editor
 {

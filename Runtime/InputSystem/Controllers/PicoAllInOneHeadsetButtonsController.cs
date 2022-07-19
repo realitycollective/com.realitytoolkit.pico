@@ -48,7 +48,7 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         /// <inheritdoc />
         protected override void UpdateInteractionMappings()
         {
-            Debug.Assert(Interactions != null && Interactions.Length > 0, $"Interaction mappings must be defined for {GetType().Name} - {ControllerHandedness}.");
+            Debug.Assert(Interactions != null && Interactions.Length > 0, $"Interaction mappings must be defined for {GetType().Name} - {Handedness}.");
 
             for (var i = 0; i < Interactions.Length; i++)
             {
@@ -59,11 +59,11 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
                         UpdateButtonPress(interactionMapping);
                         break;
                     default:
-                        Debug.LogError($"Input {interactionMapping.InputType} is not handled for controller {GetType().Name} - {ControllerHandedness}.");
+                        Debug.LogError($"Input {interactionMapping.InputType} is not handled for controller {GetType().Name} - {Handedness}.");
                         break;
                 }
 
-                interactionMapping.RaiseInputAction(InputSource, ControllerHandedness);
+                interactionMapping.RaiseInputAction(InputSource, Handedness);
             }
         }
 

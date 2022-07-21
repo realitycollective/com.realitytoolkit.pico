@@ -53,7 +53,7 @@ jobs:
       build-target: windows
       unityversion: ${{ needs.Setup-Unity.outputs.unityeditorversion }}
       # Check inside yml file for instructions on dependencies
-      dependencies: '[{"development": "github.com/realitycollective/com.realitycollective.buildtools.git"},{"development": "github.com/realitycollective/com.realitytoolkit.core.git"},{"development": "github.com/realitycollective/com.realitycollective.utilities.git"},{"pico_dependencies": "github.com/realitycollective/com.realitytoolkit.pico.git"}]'
+      dependencies: '[{"development": "github.com/realitycollective/com.realitytoolkit.core.git"},{"development": "github.com/realitycollective/com.realitycollective.utilities.git"},{"pico_dependencies": "github.com/realitycollective/com.realitytoolkit.pico.git"}]'
     secrets:
       GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}    
       GIT_PAT: ${{ secrets.GIT_PAT }} 

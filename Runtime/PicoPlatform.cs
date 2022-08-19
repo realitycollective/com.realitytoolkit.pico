@@ -1,11 +1,11 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityCollective.ServiceFramework.Definitions.Platforms;
+using RealityCollective.ServiceFramework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using RealityToolkit.Definitions.Platforms;
-using RealityToolkit.Interfaces;
 
 namespace RealityToolkit.Pico
 {
@@ -19,7 +19,7 @@ namespace RealityToolkit.Pico
         private const string xrInputSubsystemDescriptorId = "PicoXR Input";
 
         /// <inheritdoc />
-        public override IMixedRealityPlatform[] PlatformOverrides { get; } =
+        public override IPlatform[] PlatformOverrides { get; } =
         {
             new AndroidPlatform()
         };

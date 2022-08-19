@@ -5,7 +5,7 @@ using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
 using RealityToolkit.Extensions;
-using RealityToolkit.Interfaces.InputSystem.Providers.Controllers;
+using RealityToolkit.InputSystem.Interfaces.Providers;
 using UnityEngine;
 
 namespace RealityToolkit.Pico.InputSystem.Controllers

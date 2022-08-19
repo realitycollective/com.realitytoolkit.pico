@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "com.realitytoolkit.core": "1.0.0-preview.5",
-    "com.realitycollective.utilities": "1.0.0-preview.3"
+    "com.realitycollective.service-framework": "1.0.0-preview.3"
   },
   "assets": [
     {

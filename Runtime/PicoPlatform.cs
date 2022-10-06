@@ -1,11 +1,15 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityCollective.Extensions;
 using RealityCollective.ServiceFramework.Definitions.Platforms;
 using RealityCollective.ServiceFramework.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.XR.PXR;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Management;
 
 namespace RealityToolkit.Pico
 {
@@ -18,6 +22,10 @@ namespace RealityToolkit.Pico
         private const string xrDisplaySubsystemDescriptorId = "PicoXR Display";
         private const string xrInputSubsystemDescriptorId = "PicoXR Input";
 
+        private bool IsXRLoaderActive => XRGeneralSettings.Instance.IsNotNull() &&
+                    ((XRGeneralSettings.Instance.Manager.activeLoader != null && XRGeneralSettings.Instance.Manager.activeLoader.GetType() == typeof(PXR_Loader)) ||
+                    (XRGeneralSettings.Instance.Manager.activeLoaders != null && XRGeneralSettings.Instance.Manager.activeLoaders.Any(l => l.GetType() == typeof(PXR_Loader))));
+
         /// <inheritdoc />
         public override IPlatform[] PlatformOverrides { get; } =
         {
@@ -29,6 +37,12 @@ namespace RealityToolkit.Pico
         {
             get
             {
+                if (!IsXRLoaderActive)
+                {
+                    // The platform XR loader is not active.
+                    return false;
+                }
+
                 var displaySubsystems = new List<XRDisplaySubsystem>();
                 SubsystemManager.GetSubsystems(displaySubsystems);
                 var xrDisplaySubsystemDescriptorFound = false;
@@ -78,6 +92,9 @@ namespace RealityToolkit.Pico
         }
 
 #if UNITY_EDITOR
+        /// <inheritdoc />
+        public override bool IsBuildTargetAvailable => IsXRLoaderActive && base.IsBuildTargetAvailable;
+
         /// <inheritdoc />
         public override UnityEditor.BuildTarget[] ValidBuildTargets { get; } =
         {

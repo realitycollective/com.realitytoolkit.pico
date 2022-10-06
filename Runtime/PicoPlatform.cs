@@ -22,6 +22,10 @@ namespace RealityToolkit.Pico
         private const string xrDisplaySubsystemDescriptorId = "PicoXR Display";
         private const string xrInputSubsystemDescriptorId = "PicoXR Input";
 
+        private bool IsXRLoaderActive => XRGeneralSettings.Instance.IsNotNull() &&
+                    ((XRGeneralSettings.Instance.Manager.activeLoader != null && XRGeneralSettings.Instance.Manager.activeLoader.GetType() == typeof(PXR_Loader)) ||
+                    (XRGeneralSettings.Instance.Manager.activeLoaders != null && XRGeneralSettings.Instance.Manager.activeLoaders.Any(l => l.GetType() == typeof(PXR_Loader))));
+
         /// <inheritdoc />
         public override IPlatform[] PlatformOverrides { get; } =
         {
@@ -33,12 +37,7 @@ namespace RealityToolkit.Pico
         {
             get
             {
-                var xrLoaderIsActive =
-                    XRGeneralSettings.Instance.IsNotNull() &&
-                    ((XRGeneralSettings.Instance.Manager.activeLoader != null && XRGeneralSettings.Instance.Manager.activeLoader.GetType() == typeof(PXR_Loader)) ||
-                    (XRGeneralSettings.Instance.Manager.activeLoaders != null && XRGeneralSettings.Instance.Manager.activeLoaders.Any(l => l.GetType() == typeof(PXR_Loader))));
-
-                if (!xrLoaderIsActive)
+                if (!IsXRLoaderActive)
                 {
                     // The platform XR loader is not active.
                     return false;
@@ -93,6 +92,9 @@ namespace RealityToolkit.Pico
         }
 
 #if UNITY_EDITOR
+        /// <inheritdoc />
+        public override bool IsBuildTargetAvailable => IsXRLoaderActive && base.IsBuildTargetAvailable;
+
         /// <inheritdoc />
         public override UnityEditor.BuildTarget[] ValidBuildTargets { get; } =
         {

@@ -1,11 +1,15 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityCollective.Extensions;
 using RealityCollective.ServiceFramework.Definitions.Platforms;
 using RealityCollective.ServiceFramework.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.XR.PXR;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Management;
 
 namespace RealityToolkit.Pico
 {
@@ -29,6 +33,17 @@ namespace RealityToolkit.Pico
         {
             get
             {
+                var xrLoaderIsActive =
+                    XRGeneralSettings.Instance.IsNotNull() &&
+                    ((XRGeneralSettings.Instance.Manager.activeLoader != null && XRGeneralSettings.Instance.Manager.activeLoader.GetType() == typeof(PXR_Loader)) ||
+                    (XRGeneralSettings.Instance.Manager.activeLoaders != null && XRGeneralSettings.Instance.Manager.activeLoaders.Any(l => l.GetType() == typeof(PXR_Loader))));
+
+                if (!xrLoaderIsActive)
+                {
+                    // The platform XR loader is not active.
+                    return false;
+                }
+
                 var displaySubsystems = new List<XRDisplaySubsystem>();
                 SubsystemManager.GetSubsystems(displaySubsystems);
                 var xrDisplaySubsystemDescriptorFound = false;

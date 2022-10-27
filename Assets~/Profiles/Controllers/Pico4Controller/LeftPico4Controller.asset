@@ -18,16 +18,16 @@ MonoBehaviour:
   visualizationProfile: {fileID: 11400000, guid: fe125eaaf5547684d8506b794c5a6016, type: 2}
   useCustomInteractions: 0
   interactionMappingProfiles:
-  - {fileID: 11400000, guid: 520cb52e91ce83741928e02def9c4436, type: 2}
-  - {fileID: 11400000, guid: 581f9928f1a03c94881d59099ab7e110, type: 2}
-  - {fileID: 11400000, guid: 86fd147d5a8e1fa4c8bddf4c725c9147, type: 2}
-  - {fileID: 11400000, guid: 02190c841983969409674510138bc103, type: 2}
-  - {fileID: 11400000, guid: c433eac95bb616e4d925cd19d880cf11, type: 2}
-  - {fileID: 11400000, guid: 92bc7db62fdc08643b4d94c0690e1ef4, type: 2}
-  - {fileID: 11400000, guid: 32b98f01cf1076d4db50da564e534cfb, type: 2}
-  - {fileID: 11400000, guid: 459858e96a4866d45a4684ddb95cd26e, type: 2}
-  - {fileID: 11400000, guid: 51ccfc3d79b458e44bad9a51a0bd882c, type: 2}
-  - {fileID: 11400000, guid: 3af2e994543b84549a4b70f8216a6bdb, type: 2}
+  - {fileID: 11400000, guid: f50ffe7457810314cb811315bf94f669, type: 2}
+  - {fileID: 11400000, guid: 1398ac3cada012047895ac4c4cb99c09, type: 2}
+  - {fileID: 11400000, guid: c408822e1db47c34f991e808440699e0, type: 2}
+  - {fileID: 11400000, guid: 8c888894f9fa6cc45bf1750b2f35552f, type: 2}
+  - {fileID: 11400000, guid: 56f575a13a553474a9d86cff29925bdf, type: 2}
+  - {fileID: 11400000, guid: eab3daf2879f40b4d998e7568ce1dce6, type: 2}
+  - {fileID: 11400000, guid: c9af43cdb95c7864fa6966d9940f939b, type: 2}
+  - {fileID: 11400000, guid: feb38331da4960d4990f4fff519cdbe9, type: 2}
+  - {fileID: 11400000, guid: 602824ad5c69c004ebfb6982e382f2de, type: 2}
+  - {fileID: 11400000, guid: 89244cee9823df24d8d0fcbd6905145c, type: 2}
   lightThemeLeftControllerTexture: {fileID: 0}
   lightThemeLeftControllerTextureScaled: {fileID: 0}
   darkThemeLeftControllerTexture: {fileID: 0}

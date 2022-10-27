@@ -14,7 +14,7 @@ using UnityEngine.XR.Management;
 namespace RealityToolkit.Pico
 {
     /// <summary>
-    /// Used by the toolkit to signal that a feature is available on the Pico platform.
+    /// Used to signal that a feature is available on the Pico platform.
     /// </summary>
     [System.Runtime.InteropServices.Guid("91d05795-d44e-4a4d-8055-e770b592137f")]
     public class PicoPlatform : BasePlatform

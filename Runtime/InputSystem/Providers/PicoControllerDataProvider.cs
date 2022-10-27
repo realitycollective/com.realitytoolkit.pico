@@ -27,7 +27,6 @@ namespace RealityToolkit.Pico.InputSystem.Providers
             : base(name, priority, profile, parentService) { }
 
         private readonly Dictionary<Handedness, PicoController> activeControllers = new Dictionary<Handedness, PicoController>();
-        private bool allInOneHeadsetButtonsControllerEnabled;
 
         /// <inheritdoc />
         public override void Initialize()
@@ -36,24 +35,11 @@ namespace RealityToolkit.Pico.InputSystem.Providers
             {
                 return;
             }
-
-            allInOneHeadsetButtonsControllerEnabled = TryGetControllerMappingProfile(typeof(PicoAllInOneHeadsetButtonsController), Handedness.None, out _);
         }
 
         /// <inheritdoc />
         public override void Update()
         {
-            if (allInOneHeadsetButtonsControllerEnabled)
-            {
-                // The all-in-one controller is located on the Pico headset itself and always available.
-                // It also doesn't have a handedness associated.
-                var headsetController = GetOrAddController(Handedness.None, typeof(PicoAllInOneHeadsetButtonsController));
-                if (headsetController != null)
-                {
-                    headsetController.UpdateController();
-                }
-            }
-
             // We allow one type of controller per hand, check if there is a controller connected
             // for the left hand and update accordingly.
             if (PXR_Input.IsControllerConnected(PXR_Input.Controller.LeftController))

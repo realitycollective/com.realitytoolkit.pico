@@ -17,6 +17,10 @@ namespace RealityToolkit.Pico.InputSystem.Profiles
         {
             return new[]
             {
+                new ControllerDefinition(typeof(PicoG24KController), Handedness.Left),
+                new ControllerDefinition(typeof(PicoG24KController), Handedness.Right),
+                new ControllerDefinition(typeof(PicoNeo2Controller), Handedness.Left),
+                new ControllerDefinition(typeof(PicoNeo2Controller), Handedness.Right),
                 new ControllerDefinition(typeof(PicoNeo3Controller), Handedness.Left),
                 new ControllerDefinition(typeof(PicoNeo3Controller), Handedness.Right),
                 new ControllerDefinition(typeof(Pico4Controller), Handedness.Left),

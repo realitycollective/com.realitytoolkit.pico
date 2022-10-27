@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c20470ea673cf24a9554396ef332710, type: 3}
   m_Name: PicoCameraDataProviderProfile
   m_EditorClassIdentifier: 
-  trackingType: 2
-  trackingOriginMode: 1
+  trackingType: 1
+  trackingOriginMode: 2
   eyeTextureResolution: 1
   isCameraPersistent: 1
   nearClipPlaneOpaqueDisplay: 0.1
@@ -26,9 +26,8 @@ MonoBehaviour:
   transparentQualityLevel: 0
   cameraRigType:
     reference: 8e0ee4fc-c8a5-4b10-9fca-ee55b6d421ff
-  defaultHeadHeight: 0
+  defaultHeadHeight: 1.6
   bodyAdjustmentAngle: 60
   bodyAdjustmentSpeed: 1
-  applyQualitySettings: 1
+  applyQualitySettings: 0
   foveationLevel: -1
-  useRecommendedAntiAliasingLevel: 1

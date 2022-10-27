@@ -20,14 +20,5 @@ namespace RealityToolkit.Pico.CameraSystem.Profiles
         /// The rendering foveation level to use.
         /// </summary>
         public FoveationLevel FoveationLevel => foveationLevel;
-
-        [SerializeField]
-        [Tooltip("Should the Pico recommended anti aliasing level be appplied?")]
-        private bool useRecommendedAntiAliasingLevel = true;
-
-        /// <summary>
-        /// Should the Pico recommended anti aliasing level be appplied?
-        /// </summary>
-        public bool UseRecommendedAntiAliasingLevel => useRecommendedAntiAliasingLevel;
     }
 }

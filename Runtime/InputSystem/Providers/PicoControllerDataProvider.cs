@@ -68,9 +68,9 @@ namespace RealityToolkit.Pico.InputSystem.Providers
 
         private void UpdateController(Handedness handedness)
         {
-            var activeControllerDevice = PXR_Input.GetActiveController();
+            var activeControllerDeviceType = PXR_Input.GetControllerDeviceType();
             PicoController controller;
-            switch (activeControllerDevice)
+            switch (activeControllerDeviceType)
             {
                 case PXR_Input.ControllerDevice.G2:
                     controller = GetOrAddController(handedness, typeof(PicoG24KController));
@@ -80,6 +80,9 @@ namespace RealityToolkit.Pico.InputSystem.Providers
                     break;
                 case PXR_Input.ControllerDevice.Neo3:
                     controller = GetOrAddController(handedness, typeof(PicoNeo3Controller));
+                    break;
+                case PXR_Input.ControllerDevice.PICO_4:
+                    controller = GetOrAddController(handedness, typeof(Pico4Controller));
                     break;
                 case PXR_Input.ControllerDevice.NewController:
                 default:

@@ -16,7 +16,6 @@ namespace RealityToolkit.Pico.Editor
     public class PicoCameraDataProviderProfileInspector : BaseMixedRealityCameraDataProviderProfileInspector
     {
         private SerializedProperty foveationLevel;
-        private SerializedProperty useRecommendedAntiAliasingLevel;
 
         private bool showPicoSettings = true;
         private static readonly GUIContent picoSettingsFoldoutHeader = new GUIContent("Pico Platform Settings");
@@ -26,7 +25,6 @@ namespace RealityToolkit.Pico.Editor
             base.OnEnable();
 
             foveationLevel = serializedObject.FindProperty(nameof(foveationLevel));
-            useRecommendedAntiAliasingLevel = serializedObject.FindProperty(nameof(useRecommendedAntiAliasingLevel));
         }
 
         public override void OnInspectorGUI()
@@ -40,7 +38,6 @@ namespace RealityToolkit.Pico.Editor
             {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(foveationLevel);
-                EditorGUILayout.PropertyField(useRecommendedAntiAliasingLevel);
                 EditorGUI.indentLevel--;
             }
 

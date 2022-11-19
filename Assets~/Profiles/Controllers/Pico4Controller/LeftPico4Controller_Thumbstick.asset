@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fb79524faca40478c0844c24e542f7, type: 3}
-  m_Name: PicoAllInOneHeadsetButtonsController_Menu
+  m_Name: LeftPico4Controller_Thumbstick
   m_EditorClassIdentifier: 
   interactionMapping:
-    description: Menu
+    description: Thumbstick
     stateChangeType: 0
-    axisType: 2
-    inputType: 7
+    axisType: 4
+    inputType: 17
     inputAction:
       profileGuid: 399335ccc89c4d12b79f3539ca7771db
-      id: 2
-      description: Menu
-      axisConstraint: 2
+      id: 5
+      description: Teleport Direction
+      axisConstraint: 4
     keyCode: 0
-    inputName: Menu
+    inputName: Thumbstick
     axisCodeX: 
     axisCodeY: 
     inputProcessors: []

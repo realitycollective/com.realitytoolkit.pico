@@ -20,7 +20,7 @@ namespace RealityToolkit.Pico.InputSystem.Providers
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("ab929180-f710-4f29-966b-08be77135020")]
-    public class PicoControllerDataProvider : BaseControllerDataProvider, IPicoControllerDataProvider
+    public class PicoControllerDataProvider : BaseControllerServiceModule, IPicoControllerDataProvider
     {
         /// <inheritdoc />
         public PicoControllerDataProvider(string name, uint priority, PicoControllerDataProviderProfile profile, IMixedRealityInputSystem parentService)

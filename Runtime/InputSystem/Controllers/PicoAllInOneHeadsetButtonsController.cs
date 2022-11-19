@@ -22,7 +22,7 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         public PicoAllInOneHeadsetButtonsController() { }
 
         /// <inheritdoc />
-        public PicoAllInOneHeadsetButtonsController(IMixedRealityControllerDataProvider controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+        public PicoAllInOneHeadsetButtonsController(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
             : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string triggerButtonInputName = "Trigger";

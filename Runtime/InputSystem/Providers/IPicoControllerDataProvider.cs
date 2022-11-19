@@ -6,7 +6,7 @@ using RealityToolkit.InputSystem.Interfaces.Providers;
 namespace RealityToolkit.Pico.InputSystem.Providers
 {
     /// <summary>
-    /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityControllerDataProvider"/>.
+    /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityControllerServiceModule"/>.
     /// </summary>
-    public interface IPicoControllerDataProvider : IMixedRealityControllerDataProvider { }
+    public interface IPicoControllerDataProvider : IMixedRealityControllerServiceModule { }
 }

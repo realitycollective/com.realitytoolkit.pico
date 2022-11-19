@@ -16,7 +16,7 @@ namespace RealityToolkit.Pico.CameraSystem.Providers
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]
-    public class PicoCameraDataProvider : BaseCameraDataProvider, IPicoCameraDataProvider
+    public class PicoCameraDataProvider : BaseCameraServiceModule, IPicoCameraDataProvider
     {
         /// <inheritdoc />
         public PicoCameraDataProvider(string name, uint priority, PicoCameraDataProviderProfile profile, IMixedRealityCameraSystem parentService)

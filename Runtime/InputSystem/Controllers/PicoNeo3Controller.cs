@@ -18,7 +18,7 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         public PicoNeo3Controller() { }
 
         /// <inheritdoc />
-        public PicoNeo3Controller(IMixedRealityControllerDataProvider controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+        public PicoNeo3Controller(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
             : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";

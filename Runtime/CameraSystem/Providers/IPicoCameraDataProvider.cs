@@ -6,7 +6,7 @@ using RealityToolkit.CameraSystem.Interfaces;
 namespace RealityToolkit.Pico.CameraSystem.Providers
 {
     /// <summary>
-    /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityCameraDataProvider"/>.
+    /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityCameraServiceModule"/>.
     /// </summary>
-    public interface IPicoCameraDataProvider : IMixedRealityCameraDataProvider { }
+    public interface IPicoCameraDataProvider : IMixedRealityCameraServiceModule { }
 }

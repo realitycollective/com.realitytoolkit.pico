@@ -10,7 +10,7 @@ namespace RealityToolkit.Pico.CameraSystem.Profiles
     /// <summary>
     /// Configuration profile for <see cref="Providers.PicoCameraDataProvider"/>.
     /// </summary>
-    public class PicoCameraDataProviderProfile : BaseMixedRealityCameraDataProviderProfile
+    public class PicoCameraDataProviderProfile : BaseMixedRealityCameraServiceModuleProfile
     {
         [SerializeField]
         [Tooltip("The rendering foveation level to use.")]

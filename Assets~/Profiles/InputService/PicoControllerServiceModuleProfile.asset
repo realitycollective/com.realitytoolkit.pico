@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ffb2848b7600d8439bce6387caa079f, type: 3}
-  m_Name: PicoControllerDataProviderProfile
+  m_Name: PicoControllerServiceModuleProfile
   m_EditorClassIdentifier: 
   hasSetupDefaults: 1
   controllerMappingProfiles:
-  - {fileID: 11400000, guid: b3de4000c219ae4419453fd99cad5c74, type: 2}
-  - {fileID: 11400000, guid: e020b02af905e3e4d9a9fda1dc24863d, type: 2}
-  - {fileID: 11400000, guid: e80f840176f296a49af66d1740fee240, type: 2}
-  - {fileID: 11400000, guid: 1204423f058281348be1c320ab00af96, type: 2}
   - {fileID: 11400000, guid: 43abbd94bd95dcc41b3f61cae733fc55, type: 2}
   - {fileID: 11400000, guid: 3535d92a7a302e240bed29df161173f7, type: 2}
   - {fileID: 11400000, guid: 51c4549d11ed180439c1776922dbe9cb, type: 2}

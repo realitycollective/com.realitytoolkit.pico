@@ -3,17 +3,17 @@
 
 using RealityCollective.Editor.Extensions;
 using RealityToolkit.Editor.Profiles.CameraSystem;
-using RealityToolkit.Pico.CameraSystem.Profiles;
+using RealityToolkit.Pico.CameraService.Profiles;
 using UnityEditor;
 using UnityEngine;
 
 namespace RealityToolkit.Pico.Editor
 {
     /// <summary>
-    /// Default inspector for <see cref="PicoCameraDataProviderProfile"/>.
+    /// Default inspector for <see cref="PicoCameraServiceModuleProfile"/>.
     /// </summary>
-    [CustomEditor(typeof(PicoCameraDataProviderProfile))]
-    public class PicoCameraDataProviderProfileInspector : BaseMixedRealityCameraDataProviderProfileInspector
+    [CustomEditor(typeof(PicoCameraServiceModuleProfile))]
+    public class PicoCameraDataProviderProfileInspector : BaseMixedRealityCameraServiceModuleProfileInspector
     {
         private SerializedProperty foveationLevel;
 

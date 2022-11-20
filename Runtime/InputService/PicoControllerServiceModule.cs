@@ -6,36 +6,26 @@ using RealityCollective.ServiceFramework.Attributes;
 using RealityToolkit.Definitions.Devices;
 using RealityToolkit.InputSystem.Controllers;
 using RealityToolkit.InputSystem.Interfaces;
-using RealityToolkit.Pico.InputSystem.Controllers;
-using RealityToolkit.Pico.InputSystem.Profiles;
+using RealityToolkit.Pico.InputService.Profiles;
 using System;
 using System.Collections.Generic;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.InputSystem.Providers
+namespace RealityToolkit.Pico.InputService
 {
     /// <summary>
     /// Manages active controllers when running on the <see cref="PicoPlatform"/>.
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("ab929180-f710-4f29-966b-08be77135020")]
-    public class PicoControllerDataProvider : BaseControllerServiceModule, IPicoControllerDataProvider
+    public class PicoControllerServiceModule : BaseControllerServiceModule, IPicoControllerServiceModule
     {
         /// <inheritdoc />
-        public PicoControllerDataProvider(string name, uint priority, PicoControllerDataProviderProfile profile, IMixedRealityInputSystem parentService)
+        public PicoControllerServiceModule(string name, uint priority, PicoControllerServiceModuleProfile profile, IMixedRealityInputSystem parentService)
             : base(name, priority, profile, parentService) { }
 
         private readonly Dictionary<Handedness, PicoController> activeControllers = new Dictionary<Handedness, PicoController>();
-
-        /// <inheritdoc />
-        public override void Initialize()
-        {
-            if (!Application.isPlaying)
-            {
-                return;
-            }
-        }
 
         /// <inheritdoc />
         public override void Update()
@@ -72,12 +62,6 @@ namespace RealityToolkit.Pico.InputSystem.Providers
             PicoController controller;
             switch (activeControllerDeviceType)
             {
-                case PXR_Input.ControllerDevice.G2:
-                    controller = GetOrAddController(handedness, typeof(PicoG24KController));
-                    break;
-                case PXR_Input.ControllerDevice.Neo2:
-                    controller = GetOrAddController(handedness, typeof(PicoNeo2Controller));
-                    break;
                 case PXR_Input.ControllerDevice.Neo3:
                     controller = GetOrAddController(handedness, typeof(PicoNeo3Controller));
                     break;

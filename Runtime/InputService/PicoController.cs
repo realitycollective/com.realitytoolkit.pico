@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace RealityToolkit.Pico.InputSystem.Controllers
+namespace RealityToolkit.Pico.InputService
 {
     /// <summary>
     /// Base implementation for controllers on the <see cref="PicoPlatform"/>.
@@ -23,8 +23,8 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         public PicoController() { }
 
         /// <inheritdoc />
-        public PicoController(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
-            : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
+        public PicoController(IMixedRealityControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+            : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         /// <summary>
         /// This dictionary contains <see cref="AxisType.Digital"/> mappings to their respective <see cref="InputFeatureUsage"/> equivalent

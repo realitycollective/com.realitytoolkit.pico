@@ -9,17 +9,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace RealityToolkit.Pico.InputSystem.Controllers
+namespace RealityToolkit.Pico.InputService
 {
-    [System.Runtime.InteropServices.Guid("5402e1d6-466e-438e-8667-0ab654eb8780")]
-    public class PicoNeo2Controller : PicoController
+    [System.Runtime.InteropServices.Guid("7cd3ce74-425f-40b2-944a-7d575da7ec74")]
+    public class Pico4Controller : PicoController
     {
         /// <inheritdoc />
-        public PicoNeo2Controller() { }
+        public Pico4Controller() { }
 
         /// <inheritdoc />
-        public PicoNeo2Controller(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
-            : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
+        public Pico4Controller(IMixedRealityControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+            : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";
         private const string triggerInputName = "Trigger";
@@ -29,8 +29,8 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         private const string thumbstickInputName = "Thumbstick";
         private const string thumbstickPressInputName = "Thumbstick Press";
         private const string spatialPointerPoseInputName = "Spatial Pointer Pose";
-        private const string xButtonInputName = "X";
-        private const string yButtonInputName = "Y";
+        private const string xAButtonInputName = "X/A";
+        private const string yBButtonInputName = "Y/B";
 
         /// <inheritdoc />
         public override MixedRealityInteractionMapping[] DefaultInteractions => new[]
@@ -41,8 +41,8 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
             new MixedRealityInteractionMapping(triggerPressInputName, AxisType.Digital, triggerPressInputName, DeviceInputType.ButtonPress),
             new MixedRealityInteractionMapping(gripInputName, AxisType.SingleAxis, gripInputName, DeviceInputType.Trigger),
             new MixedRealityInteractionMapping(gripPressInputName, AxisType.Digital, gripPressInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(xButtonInputName, AxisType.Digital, xButtonInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(yButtonInputName, AxisType.Digital, yButtonInputName, DeviceInputType.ButtonPress),
+            new MixedRealityInteractionMapping(xAButtonInputName, AxisType.Digital, xAButtonInputName, DeviceInputType.ButtonPress),
+            new MixedRealityInteractionMapping(yBButtonInputName, AxisType.Digital, yBButtonInputName, DeviceInputType.ButtonPress),
             new MixedRealityInteractionMapping(thumbstickInputName, AxisType.DualAxis, thumbstickInputName, DeviceInputType.ThumbStick),
             new MixedRealityInteractionMapping(thumbstickPressInputName, AxisType.Digital, thumbstickPressInputName, DeviceInputType.ButtonPress)
         };
@@ -54,8 +54,8 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
             { triggerPressInputName, CommonUsages.triggerButton },
             { gripPressInputName, CommonUsages.gripButton },
             { thumbstickPressInputName, CommonUsages.primary2DAxisClick },
-            { xButtonInputName, CommonUsages.primaryButton },
-            { yButtonInputName, CommonUsages.secondaryButton }
+            { xAButtonInputName, CommonUsages.primaryButton },
+            { yBButtonInputName, CommonUsages.secondaryButton }
         };
 
         /// <inheritdoc />

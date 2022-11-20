@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace RealityToolkit.Pico.InputSystem.Controllers
+namespace RealityToolkit.Pico.InputService
 {
     [System.Runtime.InteropServices.Guid("a58f0550-e847-483e-9e5c-0119a7098530")]
     public class PicoNeo3Controller : PicoController
@@ -18,8 +18,8 @@ namespace RealityToolkit.Pico.InputSystem.Controllers
         public PicoNeo3Controller() { }
 
         /// <inheritdoc />
-        public PicoNeo3Controller(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
-            : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
+        public PicoNeo3Controller(IMixedRealityControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+            : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";
         private const string triggerInputName = "Trigger";

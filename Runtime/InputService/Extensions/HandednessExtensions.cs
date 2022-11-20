@@ -4,7 +4,7 @@
 using Unity.XR.PXR;
 using RealityCollective.Definitions.Utilities;
 
-namespace RealityToolkit.Pico.Extensions
+namespace RealityToolkit.Pico.InputService.Extensions
 {
     /// <summary>
     /// Extension methods for <see cref="Handedness"/>.

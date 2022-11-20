@@ -3,10 +3,10 @@
 
 using RealityToolkit.CameraSystem.Interfaces;
 
-namespace RealityToolkit.Pico.CameraSystem.Providers
+namespace RealityToolkit.Pico.CameraService
 {
     /// <summary>
     /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityCameraServiceModule"/>.
     /// </summary>
-    public interface IPicoCameraDataProvider : IMixedRealityCameraServiceModule { }
+    public interface IPicoCameraServiceModule : IMixedRealityCameraServiceModule { }
 }

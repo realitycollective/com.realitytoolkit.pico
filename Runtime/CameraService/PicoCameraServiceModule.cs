@@ -4,21 +4,21 @@
 using RealityCollective.ServiceFramework.Attributes;
 using RealityToolkit.CameraSystem.Interfaces;
 using RealityToolkit.CameraSystem.Providers;
-using RealityToolkit.Pico.CameraSystem.Profiles;
+using RealityToolkit.Pico.CameraService.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.CameraSystem.Providers
+namespace RealityToolkit.Pico.CameraService
 {
     /// <summary>
     /// <see cref="IMixedRealityCameraSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]
-    public class PicoCameraDataProvider : BaseCameraServiceModule, IPicoCameraDataProvider
+    public class PicoCameraServiceModule : BaseCameraServiceModule, IPicoCameraServiceModule
     {
         /// <inheritdoc />
-        public PicoCameraDataProvider(string name, uint priority, PicoCameraDataProviderProfile profile, IMixedRealityCameraSystem parentService)
+        public PicoCameraServiceModule(string name, uint priority, PicoCameraServiceModuleProfile profile, IMixedRealityCameraSystem parentService)
             : base(name, priority, profile, parentService)
         {
             foveationLevel = profile.FoveationLevel;

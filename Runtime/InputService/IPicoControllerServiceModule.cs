@@ -3,10 +3,10 @@
 
 using RealityToolkit.InputSystem.Interfaces.Providers;
 
-namespace RealityToolkit.Pico.InputSystem.Providers
+namespace RealityToolkit.Pico.InputService
 {
     /// <summary>
     /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IMixedRealityControllerServiceModule"/>.
     /// </summary>
-    public interface IPicoControllerDataProvider : IMixedRealityControllerServiceModule { }
+    public interface IPicoControllerServiceModule : IMixedRealityControllerServiceModule { }
 }

@@ -5,12 +5,12 @@ using RealityToolkit.CameraSystem.Definitions;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.CameraSystem.Profiles
+namespace RealityToolkit.Pico.CameraService.Profiles
 {
     /// <summary>
-    /// Configuration profile for <see cref="Providers.PicoCameraDataProvider"/>.
+    /// Configuration profile for <see cref="PicoCameraServiceModule"/>.
     /// </summary>
-    public class PicoCameraDataProviderProfile : BaseMixedRealityCameraServiceModuleProfile
+    public class PicoCameraServiceModuleProfile : BaseMixedRealityCameraServiceModuleProfile
     {
         [SerializeField]
         [Tooltip("The rendering foveation level to use.")]

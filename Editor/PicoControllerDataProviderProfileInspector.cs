@@ -8,8 +8,8 @@ using RealityToolkit.Editor.Profiles.InputSystem.Controllers;
 namespace RealityToolkit.Pico.Editor
 {
     /// <summary>
-    /// Default inspector for <see cref="PicoControllerDataProviderProfile"/>.
+    /// Default inspector for <see cref="PicoControllerServiceModuleProfile"/>.
     /// </summary>
-    [CustomEditor(typeof(PicoControllerDataProviderProfile))]
+    [CustomEditor(typeof(PicoControllerServiceModuleProfile))]
     public class PicoControllerDataProviderProfileInspector : BaseMixedRealityControllerDataProviderProfileInspector { }
 }

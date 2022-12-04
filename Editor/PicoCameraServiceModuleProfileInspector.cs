@@ -13,7 +13,7 @@ namespace RealityToolkit.Pico.Editor
     /// Default inspector for <see cref="PicoCameraServiceModuleProfile"/>.
     /// </summary>
     [CustomEditor(typeof(PicoCameraServiceModuleProfile))]
-    public class PicoCameraDataProviderProfileInspector : BaseMixedRealityCameraServiceModuleProfileInspector
+    public class PicoCameraServiceModuleProfileInspector : BaseMixedRealityCameraServiceModuleProfileInspector
     {
         private SerializedProperty foveationLevel;
 

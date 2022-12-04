@@ -11,5 +11,5 @@ namespace RealityToolkit.Pico.Editor
     /// Default inspector for <see cref="PicoControllerServiceModuleProfile"/>.
     /// </summary>
     [CustomEditor(typeof(PicoControllerServiceModuleProfile))]
-    public class PicoControllerDataProviderProfileInspector : BaseMixedRealityControllerServiceModuleProfileInspector { }
+    public class PicoControllerServiceModuleProfileInspector : BaseMixedRealityControllerServiceModuleProfileInspector { }
 }

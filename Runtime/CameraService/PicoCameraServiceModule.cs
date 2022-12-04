@@ -3,7 +3,7 @@
 
 using RealityCollective.ServiceFramework.Attributes;
 using RealityToolkit.CameraSystem.Interfaces;
-using RealityToolkit.CameraSystem.Providers;
+using RealityToolkit.CameraSystem.Modules;
 using RealityToolkit.Pico.CameraService.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;

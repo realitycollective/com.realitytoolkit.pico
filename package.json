@@ -25,7 +25,8 @@
     "url": "https://github.com/realitycollective"
   },
   "dependencies": {
-    "com.realitytoolkit.core": "1.0.0-preview.9"
+    "com.realitytoolkit.core": "1.0.0-preview.12",
+    "com.unity.xr.picoxr": "2.1.1"
   },
   "assets": [
     {

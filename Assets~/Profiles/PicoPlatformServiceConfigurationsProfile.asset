@@ -18,17 +18,17 @@ MonoBehaviour:
   configurations:
   - instancedType:
       reference: 01f7685f-40a4-49c1-b0cf-8d17dee1fb2b
-    name: Pico Camera Data Provider
+    name: Pico Camera Service Module
     priority: 0
+    profile: {fileID: 11400000, guid: 180d48ab9a306fa4f8fccb465ad411fa, type: 2}
     platformEntries:
       runtimePlatforms:
       - reference: 91d05795-d44e-4a4d-8055-e770b592137f
-    profile: {fileID: 11400000, guid: 180d48ab9a306fa4f8fccb465ad411fa, type: 2}
   - instancedType:
       reference: ab929180-f710-4f29-966b-08be77135020
-    name: Pico Controller Data Provider
+    name: Pico Controller Service Module
     priority: 1
+    profile: {fileID: 11400000, guid: 4fa8c221332b95a4caa5fde3fe8047f7, type: 2}
     platformEntries:
       runtimePlatforms:
       - reference: 91d05795-d44e-4a4d-8055-e770b592137f
-    profile: {fileID: 11400000, guid: 4fa8c221332b95a4caa5fde3fe8047f7, type: 2}

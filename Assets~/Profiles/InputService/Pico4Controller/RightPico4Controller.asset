@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: RightPico4Controller
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: 7cd3ce74-425f-40b2-944a-7d575da7ec74
+  handedness: 2
+  visualizationProfile: {fileID: 11400000, guid: 5ee67c77447ce88409a3e04e57806963, type: 2}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: e28a7a4ae794140438af19e796f00a78, type: 2}
+  - {fileID: 11400000, guid: cc333de39af3f6842ba332635548ed1e, type: 2}
+  - {fileID: 11400000, guid: ef686aa3ca4b7734abff3e2901b447bf, type: 2}
+  - {fileID: 11400000, guid: 8526b16825982b2458fd26cd524cc94d, type: 2}
+  - {fileID: 11400000, guid: 74a11d13b864b4f4e8c7e6c1763a1319, type: 2}
+  - {fileID: 11400000, guid: ae9dd92e129c22745a34b99479159682, type: 2}
+  - {fileID: 11400000, guid: 7e401acc533423a469cf16a1e4bfecae, type: 2}
+  - {fileID: 11400000, guid: 8a02ca137f2c91c49b2e41248afb74c8, type: 2}
+  - {fileID: 11400000, guid: 58d1bf6a7626f0147969d5572bee843d, type: 2}
+  - {fileID: 11400000, guid: 823b2264256861e4fbf666167def1b02, type: 2}
+  lightThemeLeftControllerTexture: {fileID: 0}
+  lightThemeLeftControllerTextureScaled: {fileID: 0}
+  darkThemeLeftControllerTexture: {fileID: 0}
+  darkThemeLeftControllerTextureScaled: {fileID: 0}
+  lightThemeRightControllerTexture: {fileID: 0}
+  lightThemeRightControllerTextureScaled: {fileID: 0}
+  darkThemeRightControllerTexture: {fileID: 0}
+  darkThemeRightControllerTextureScaled: {fileID: 0}

@@ -7,7 +7,7 @@ This package enables your Reality Toolkit based project to run on PICO devices.
 
 [![openupm](https://img.shields.io/npm/v/com.realitytoolkit.pico?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.realitytoolkit.pico/)
 
-[![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/KXABVsTa)
+[![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/hF7TtRCFmB)
 
 ## What's included?
 
@@ -44,7 +44,7 @@ If you already have an instance of the Reality Toolkit in your scene, then insta
 
 Join our community and get in touch with other developers.
 
-- [Discord](https://discord.gg/KXABVsTa)
+- [Discord](https://discord.gg/hF7TtRCFmB)
 
 ## Build Status
 <!-- Check build status links and details -->

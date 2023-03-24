@@ -2,8 +2,8 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityCollective.ServiceFramework.Attributes;
-using RealityToolkit.CameraSystem.Interfaces;
-using RealityToolkit.CameraSystem.Modules;
+using RealityToolkit.CameraService.Interfaces;
+using RealityToolkit.CameraService.Modules;
 using RealityToolkit.Pico.CameraService.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;
@@ -15,18 +15,18 @@ namespace RealityToolkit.Pico.CameraService
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]
-    public class PicoCameraServiceModule : BaseCameraServiceModule, IPicoCameraServiceModule
+    public class PicoCameraRigServiceModule : BaseCameraServiceModule, IPicoCameraRigServiceModule
     {
         /// <inheritdoc />
-        public PicoCameraServiceModule(string name, uint priority, PicoCameraServiceModuleProfile profile, IMixedRealityCameraSystem parentService)
+        public PicoCameraRigServiceModule(string name, uint priority, PicoCameraRigServiceModuleProfile profile, ICameraService parentService)
             : base(name, priority, profile, parentService)
         {
             foveationLevel = profile.FoveationLevel;
-            cameraSystem = parentService;
+            cameraService = parentService;
         }
 
         private readonly FoveationLevel foveationLevel;
-        private readonly IMixedRealityCameraSystem cameraSystem;
+        private readonly ICameraService cameraService;
 
         /// <inheritdoc />
         public override void Initialize()
@@ -34,8 +34,8 @@ namespace RealityToolkit.Pico.CameraService
             base.Initialize();
 
             PXR_Plugin.System.UPxr_SetSecure(PXR_ProjectSetting.GetProjectConfig().useContentProtect);
-            PXR_Plugin.PlatformSetting.UPxr_BindVerifyService(cameraSystem.MainCameraRig.RigTransform.gameObject.name);
-            cameraSystem.MainCameraRig.PlayerCamera.depthTextureMode = DepthTextureMode.Depth;
+            PXR_Plugin.PlatformSetting.UPxr_BindVerifyService(cameraService.CameraRig.RigTransform.gameObject.name);
+            cameraService.CameraRig.PlayerCamera.depthTextureMode = DepthTextureMode.Depth;
 
             PXR_FoveationRendering.SetFoveationLevel(foveationLevel);
         }

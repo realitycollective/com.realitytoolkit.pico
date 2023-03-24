@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da64fb88269149f8a95f1fb969d6a0b4, type: 3}
-  m_Name: PicoPlatformServiceConfigurationsProfile
+  m_Name: PicoPackageInstallerProfile
   m_EditorClassIdentifier: 
   platformEntries:
     runtimePlatforms:
@@ -18,7 +18,7 @@ MonoBehaviour:
   configurations:
   - instancedType:
       reference: 01f7685f-40a4-49c1-b0cf-8d17dee1fb2b
-    name: Pico Camera Service Module
+    name: Pico Camera Rig Service Module
     priority: 0
     profile: {fileID: 11400000, guid: 180d48ab9a306fa4f8fccb465ad411fa, type: 2}
     platformEntries:

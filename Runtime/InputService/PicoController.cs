@@ -4,7 +4,6 @@
 using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.Definitions.Utilities;
 using RealityToolkit.InputSystem.Controllers;
 using RealityToolkit.InputSystem.Extensions;
 using RealityToolkit.InputSystem.Interfaces.Modules;
@@ -52,7 +51,7 @@ namespace RealityToolkit.Pico.InputService
         /// <summary>
         /// The controller's pointer pose in world space.
         /// </summary>
-        protected MixedRealityPose SpatialPointerPose { get; set; }
+        protected Pose SpatialPointerPose { get; set; }
 
         /// <inheritdoc />
         public override void UpdateController()
@@ -114,7 +113,7 @@ namespace RealityToolkit.Pico.InputService
             IsRotationAvailable = inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out var rotation);
             IsPositionApproximate = false;
 
-            var updatedControllerPose = new MixedRealityPose(position, rotation);
+            var updatedControllerPose = new Pose(position, rotation);
             if (updatedControllerPose != Pose)
             {
                 Pose = updatedControllerPose;

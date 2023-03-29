@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "com.realitytoolkit.core": "1.0.0-pre.6",
-    "com.unity.xr.picoxr": "2.1.1"
+    "com.unity.xr.picoxr": "2.1.4"
   },
   "assets": [
     {

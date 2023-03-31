@@ -7,9 +7,9 @@ This package enables your Reality Toolkit based project to run on PICO devices.
 
 [![openupm](https://img.shields.io/npm/v/com.realitytoolkit.pico?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.realitytoolkit.pico/)
 [![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/hF7TtRCFmB)
-[![Main](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml/badge.svg?branch=main)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml)
-[![Development](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml/badge.svg?branch=development)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml)
-[![Build and test UPM packages for platforms, all branches except main](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml/badge.svg?branch=development)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml)
+[![Publish main branch and increment version](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml)
+[![Publish development branch on Merge](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml)
+[![Build and test UPM packages for platforms, all branches except main](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml)
 
 ## What's included?
 

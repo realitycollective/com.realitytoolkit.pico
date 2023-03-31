@@ -22,7 +22,7 @@
     "versionDefines": [
         {
             "name": "com.unity.xr.picoxr",
-            "expression": "[1.0,2.0)",
+            "expression": "[1.0,2.0.7]",
             "define": "PICO_XR_LEGACY"
         }
     ],

@@ -7,7 +7,7 @@ using RealityToolkit.Definitions.Controllers;
 namespace RealityToolkit.Pico.InputService.Profiles
 {
     /// <summary>
-    /// Configuration profile for <see cref="Providers.PicoControllerDataProvider"/>.
+    /// Configuration profile for <see cref="InputService.PicoControllerServiceModule"/>.
     /// </summary>
     public class PicoControllerServiceModuleProfile : BaseMixedRealityControllerServiceModuleProfile
     {
@@ -16,6 +16,11 @@ namespace RealityToolkit.Pico.InputService.Profiles
         {
             return new[]
             {
+                new ControllerDefinition(typeof(PicoAllInOneHeadsetButtonsController), Handedness.None),
+                new ControllerDefinition(typeof(PicoG24KController), Handedness.Left),
+                new ControllerDefinition(typeof(PicoG24KController), Handedness.Right),
+                new ControllerDefinition(typeof(PicoNeo2Controller), Handedness.Left),
+                new ControllerDefinition(typeof(PicoNeo2Controller), Handedness.Right),
                 new ControllerDefinition(typeof(PicoNeo3Controller), Handedness.Left),
                 new ControllerDefinition(typeof(PicoNeo3Controller), Handedness.Right),
                 new ControllerDefinition(typeof(Pico4Controller), Handedness.Left),

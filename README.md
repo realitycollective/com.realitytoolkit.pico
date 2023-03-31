@@ -18,12 +18,16 @@ This package enables your Reality Toolkit based project to run on PICO devices.
 
 ## Supported Devices
 
-- PICO Neo3 Pro
-- PICO Neo3 Link
-- PICO Neo3 Pro Eye
+- PICO G24K*
+- PICO Neo 2*
+- PICO Neo 3 Pro
+- PICO Neo 3 Link
+- PICO Neo 3 Pro Eye
 - PICO 4
 - PICO 4 Pro
 - PICO 4 Enterprise
+
+*Requires the legacy v1 Pico integration SDK package as a dependency
 
 ## Requirements
 

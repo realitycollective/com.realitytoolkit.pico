@@ -27,9 +27,39 @@ namespace RealityToolkit.Pico.InputService
 
         private readonly Dictionary<Handedness, PicoController> activeControllers = new Dictionary<Handedness, PicoController>();
 
+#if PICO_XR_LEGACY
+        private bool allInOneHeadsetButtonsControllerEnabled;
+#endif
+
+#if PICO_XR_LEGACY
+        /// <inheritdoc />
+        public override void Initialize()
+        {
+            if (!Application.isPlaying)
+            {
+                return;
+            }
+
+            allInOneHeadsetButtonsControllerEnabled = TryGetControllerMappingProfile(typeof(PicoAllInOneHeadsetButtonsController), Handedness.None, out _);
+        }
+#endif
+
         /// <inheritdoc />
         public override void Update()
         {
+#if PICO_XR_LEGACY
+            if (allInOneHeadsetButtonsControllerEnabled)
+            {
+                // The all-in-one controller is located on the Pico headset itself and always available.
+                // It also doesn't have a handedness associated.
+                var headsetController = GetOrAddController(Handedness.None, typeof(PicoAllInOneHeadsetButtonsController));
+                if (headsetController != null)
+                {
+                    headsetController.UpdateController();
+                }
+            }
+#endif
+
             // We allow one type of controller per hand, check if there is a controller connected
             // for the left hand and update accordingly.
             if (PXR_Input.IsControllerConnected(PXR_Input.Controller.LeftController))
@@ -62,6 +92,14 @@ namespace RealityToolkit.Pico.InputService
             PicoController controller;
             switch (activeControllerDeviceType)
             {
+#if PICO_XR_LEGACY
+                case PXR_Input.ControllerDevice.G2:
+                    controller = GetOrAddController(handedness, typeof(PicoG24KController));
+                    break;
+                case PXR_Input.ControllerDevice.Neo2:
+                    controller = GetOrAddController(handedness, typeof(PicoNeo2Controller));
+                    break;
+#endif
                 case PXR_Input.ControllerDevice.Neo3:
                     controller = GetOrAddController(handedness, typeof(PicoNeo3Controller));
                     break;

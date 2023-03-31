@@ -19,6 +19,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.picoxr",
+            "expression": "[1.0,2.0)",
+            "define": "PICO_XR_LEGACY"
+        }
+    ],
     "noEngineReferences": false
 }

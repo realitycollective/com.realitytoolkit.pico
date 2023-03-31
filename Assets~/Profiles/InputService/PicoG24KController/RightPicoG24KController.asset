@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: RightPicoG24KController
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: 07b23b0b-1be1-4ac5-942e-0fe3bc65a260
+  handedness: 2
+  visualizationProfile: {fileID: 11400000, guid: 5ee67c77447ce88409a3e04e57806963,
+    type: 2}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: 501e2e67b3ed96c4fb1bea991a104875, type: 2}
+  - {fileID: 11400000, guid: ec012d348b9e7c147bd766cb67cbaf7b, type: 2}
+  - {fileID: 11400000, guid: e8f621edf55951249a15d381c3e30573, type: 2}
+  - {fileID: 11400000, guid: 386ab3e8fbd566d4b8303648a4fe5692, type: 2}
+  - {fileID: 11400000, guid: b44df9c60a47eea45aaa1e806a80b9f2, type: 2}
+  - {fileID: 11400000, guid: 603653c4368665e4c9d23ba8a36bfb11, type: 2}

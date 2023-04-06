@@ -7,7 +7,8 @@
         "GUID:13703f41b24bb904cb2305abe6317e3d",
         "GUID:e40ba710768534012815d3193fa296cb",
         "GUID:65a004a26c89ac5468e8d4b4b057f1c8",
-        "GUID:de07d9dfb71843b46aa2c474f73ca4cc"
+        "GUID:de07d9dfb71843b46aa2c474f73ca4cc",
+        "GUID:f70b6e413e9cf3744b522089b55c7e84"
     ],
     "includePlatforms": [
         "Android",
@@ -24,6 +25,11 @@
             "name": "com.unity.xr.picoxr",
             "expression": "[1.0,2.0.7]",
             "define": "PICO_XR_LEGACY"
+        },
+        {
+            "name": "com.unity.pico.livepreview",
+            "expression": "1.0.0",
+            "define": "PICO_XR_LP"
         }
     ],
     "noEngineReferences": false

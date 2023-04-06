@@ -11,7 +11,7 @@ This package enables your Reality Toolkit based project to run on PICO devices.
 [![Publish development branch on Merge](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml)
 [![Build and test UPM packages for platforms, all branches except main](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml)
 
-## What's included?
+## What is included?
 
 - Service modules for the Reality Toolkit's Camera Service
 - Service modules for the Reality Toolkit's Input Service

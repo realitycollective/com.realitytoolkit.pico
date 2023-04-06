@@ -12,6 +12,8 @@ using UnityEngine.XR.Management;
 
 #if UNITY_EDITOR && !PICO_XR_LEGACY && PICO_XR_LP
 using Unity.XR.PICO.LivePreview;
+#else
+using Unity.XR.PXR;
 #endif
 
 namespace RealityToolkit.Pico

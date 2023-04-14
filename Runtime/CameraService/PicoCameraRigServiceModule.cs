@@ -15,7 +15,7 @@ namespace RealityToolkit.Pico.CameraService
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]
-    public class PicoCameraRigServiceModule : BaseCameraServiceModule, IPicoCameraRigServiceModule
+    public class PicoCameraRigServiceModule : BaseCameraRigServiceModule, IPicoCameraRigServiceModule
     {
         /// <inheritdoc />
         public PicoCameraRigServiceModule(string name, uint priority, PicoCameraRigServiceModuleProfile profile, ICameraService parentService)
@@ -35,7 +35,7 @@ namespace RealityToolkit.Pico.CameraService
 
             PXR_Plugin.System.UPxr_SetSecure(PXR_ProjectSetting.GetProjectConfig().useContentProtect);
             PXR_Plugin.PlatformSetting.UPxr_BindVerifyService(cameraService.CameraRig.RigTransform.gameObject.name);
-            cameraService.CameraRig.PlayerCamera.depthTextureMode = DepthTextureMode.Depth;
+            cameraService.CameraRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
 
             PXR_FoveationRendering.SetFoveationLevel(foveationLevel);
         }

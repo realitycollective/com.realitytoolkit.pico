@@ -4,7 +4,7 @@
 using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.InputSystem.Interfaces.Modules;
+using RealityToolkit.Input.Interfaces.Modules;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
@@ -18,7 +18,7 @@ namespace RealityToolkit.Pico.InputService
         public Pico4Controller() { }
 
         /// <inheritdoc />
-        public Pico4Controller(IMixedRealityControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+        public Pico4Controller(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
             : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";
@@ -33,18 +33,18 @@ namespace RealityToolkit.Pico.InputService
         private const string yBButtonInputName = "Y/B";
 
         /// <inheritdoc />
-        public override MixedRealityInteractionMapping[] DefaultInteractions => new[]
+        public override InteractionMapping[] DefaultInteractions => new[]
         {
-            new MixedRealityInteractionMapping(spatialPointerPoseInputName, AxisType.SixDof, spatialPointerPoseInputName, DeviceInputType.SpatialPointer),
-            new MixedRealityInteractionMapping(menuButtonInputName, AxisType.Digital, menuButtonInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(triggerInputName, AxisType.SingleAxis, triggerInputName, DeviceInputType.Trigger),
-            new MixedRealityInteractionMapping(triggerPressInputName, AxisType.Digital, triggerPressInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(gripInputName, AxisType.SingleAxis, gripInputName, DeviceInputType.Trigger),
-            new MixedRealityInteractionMapping(gripPressInputName, AxisType.Digital, gripPressInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(xAButtonInputName, AxisType.Digital, xAButtonInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(yBButtonInputName, AxisType.Digital, yBButtonInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(thumbstickInputName, AxisType.DualAxis, thumbstickInputName, DeviceInputType.ThumbStick),
-            new MixedRealityInteractionMapping(thumbstickPressInputName, AxisType.Digital, thumbstickPressInputName, DeviceInputType.ButtonPress)
+            new InteractionMapping(spatialPointerPoseInputName, AxisType.SixDof, spatialPointerPoseInputName, DeviceInputType.SpatialPointer),
+            new InteractionMapping(menuButtonInputName, AxisType.Digital, menuButtonInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(triggerInputName, AxisType.SingleAxis, triggerInputName, DeviceInputType.Trigger),
+            new InteractionMapping(triggerPressInputName, AxisType.Digital, triggerPressInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(gripInputName, AxisType.SingleAxis, gripInputName, DeviceInputType.Trigger),
+            new InteractionMapping(gripPressInputName, AxisType.Digital, gripPressInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(xAButtonInputName, AxisType.Digital, xAButtonInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(yBButtonInputName, AxisType.Digital, yBButtonInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(thumbstickInputName, AxisType.DualAxis, thumbstickInputName, DeviceInputType.ThumbStick),
+            new InteractionMapping(thumbstickPressInputName, AxisType.Digital, thumbstickPressInputName, DeviceInputType.ButtonPress)
         };
 
         /// <inheritdoc />

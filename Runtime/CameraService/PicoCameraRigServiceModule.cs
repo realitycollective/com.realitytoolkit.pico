@@ -11,7 +11,7 @@ using UnityEngine;
 namespace RealityToolkit.Pico.CameraService
 {
     /// <summary>
-    /// <see cref="IMixedRealityCameraSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
+    /// <see cref="ICameraSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]

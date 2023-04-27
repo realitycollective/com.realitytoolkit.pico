@@ -4,8 +4,8 @@
 using RealityCollective.Definitions.Utilities;
 using RealityCollective.ServiceFramework.Attributes;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.InputSystem.Controllers;
-using RealityToolkit.InputSystem.Interfaces;
+using RealityToolkit.Input.Controllers;
+using RealityToolkit.Input.Interfaces;
 using RealityToolkit.Pico.InputService.Profiles;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace RealityToolkit.Pico.InputService
     public class PicoControllerServiceModule : BaseControllerServiceModule, IPicoControllerServiceModule
     {
         /// <inheritdoc />
-        public PicoControllerServiceModule(string name, uint priority, PicoControllerServiceModuleProfile profile, IMixedRealityInputSystem parentService)
+        public PicoControllerServiceModule(string name, uint priority, PicoControllerServiceModuleProfile profile, IInputService parentService)
             : base(name, priority, profile, parentService) { }
 
         private readonly Dictionary<Handedness, PicoController> activeControllers = new Dictionary<Handedness, PicoController>();
@@ -166,7 +166,7 @@ namespace RealityToolkit.Pico.InputService
                 detectedController.TryRenderControllerModel();
                 AddController(detectedController);
                 activeControllers.Add(handedness, detectedController);
-                InputSystem?.RaiseSourceDetected(detectedController.InputSource, detectedController);
+                InputService?.RaiseSourceDetected(detectedController.InputSource, detectedController);
 
                 return detectedController;
             }
@@ -181,7 +181,7 @@ namespace RealityToolkit.Pico.InputService
         {
             if (TryGetController(handedness, out var controller))
             {
-                InputSystem?.RaiseSourceLost(controller.InputSource, controller);
+                InputService?.RaiseSourceLost(controller.InputSource, controller);
 
                 if (removeFromRegistry)
                 {

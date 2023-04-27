@@ -4,8 +4,8 @@
 using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.InputSystem.Extensions;
-using RealityToolkit.InputSystem.Interfaces.Modules;
+using RealityToolkit.Input.Extensions;
+using RealityToolkit.Input.Interfaces.Modules;
 using UnityEngine;
 
 namespace RealityToolkit.Pico.InputService
@@ -22,17 +22,17 @@ namespace RealityToolkit.Pico.InputService
         public PicoAllInOneHeadsetButtonsController() { }
 
         /// <inheritdoc />
-        public PicoAllInOneHeadsetButtonsController(IMixedRealityControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+        public PicoAllInOneHeadsetButtonsController(IControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
             : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string triggerButtonInputName = "Trigger";
         private const string menuButtonInputName = "Menu";
 
         /// <inheritdoc />
-        public override MixedRealityInteractionMapping[] DefaultInteractions => new[]
+        public override InteractionMapping[] DefaultInteractions => new[]
         {
-            new MixedRealityInteractionMapping(triggerButtonInputName, AxisType.Digital, triggerButtonInputName, DeviceInputType.ButtonPress),
-            new MixedRealityInteractionMapping(menuButtonInputName, AxisType.Digital, menuButtonInputName, DeviceInputType.ButtonPress)
+            new InteractionMapping(triggerButtonInputName, AxisType.Digital, triggerButtonInputName, DeviceInputType.ButtonPress),
+            new InteractionMapping(menuButtonInputName, AxisType.Digital, menuButtonInputName, DeviceInputType.ButtonPress)
         };
 
         /// <inheritdoc />
@@ -41,7 +41,7 @@ namespace RealityToolkit.Pico.InputService
             if (TrackingState != TrackingState.NotApplicable)
             {
                 TrackingState = TrackingState.NotApplicable;
-                InputSystem?.RaiseSourceTrackingStateChanged(InputSource, this, TrackingState);
+                InputService?.RaiseSourceTrackingStateChanged(InputSource, this, TrackingState);
             }
         }
 
@@ -67,17 +67,17 @@ namespace RealityToolkit.Pico.InputService
             }
         }
 
-        private void UpdateButtonPress(MixedRealityInteractionMapping interactionMapping)
+        private void UpdateButtonPress(InteractionMapping interactionMapping)
         {
             Debug.Assert(interactionMapping.AxisType == AxisType.Digital);
 
             if (interactionMapping.InputName.Equals(triggerButtonInputName))
             {
-                interactionMapping.BoolData = Input.GetKey(KeyCode.JoystickButton0);
+                interactionMapping.BoolData = UnityEngine.Input.GetKey(KeyCode.JoystickButton0);
             }
             else if (interactionMapping.InputName.Equals(menuButtonInputName))
             {
-                interactionMapping.BoolData = Input.GetKey(KeyCode.Escape);
+                interactionMapping.BoolData = UnityEngine.Input.GetKey(KeyCode.Escape);
             }
         }
     }

@@ -4,9 +4,9 @@
 using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 using RealityToolkit.Definitions.Devices;
-using RealityToolkit.InputSystem.Controllers;
-using RealityToolkit.InputSystem.Extensions;
-using RealityToolkit.InputSystem.Interfaces.Modules;
+using RealityToolkit.Input.Controllers;
+using RealityToolkit.Input.Extensions;
+using RealityToolkit.Input.Interfaces.Modules;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
@@ -22,7 +22,7 @@ namespace RealityToolkit.Pico.InputService
         public PicoController() { }
 
         /// <inheritdoc />
-        public PicoController(IMixedRealityControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, MixedRealityControllerMappingProfile controllerMappingProfile)
+        public PicoController(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
             : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         /// <summary>
@@ -42,11 +42,6 @@ namespace RealityToolkit.Pico.InputService
         /// used to read the buttons state.
         /// </summary>
         protected virtual IReadOnlyDictionary<string, InputFeatureUsage<Vector2>> DualAxisInputFeatureUsageMap { get; set; } = new Dictionary<string, InputFeatureUsage<Vector2>>();
-
-        ///// <summary>
-        ///// The controller's pose in world space.
-        ///// </summary>
-        //protected MixedRealityPose ControllerPose { get; set; }
 
         /// <summary>
         /// The controller's pointer pose in world space.
@@ -86,7 +81,7 @@ namespace RealityToolkit.Pico.InputService
 
             if (TrackingState != currentTrackingState)
             {
-                InputSystem?.RaiseSourceTrackingStateChanged(InputSource, this, TrackingState);
+                InputService?.RaiseSourceTrackingStateChanged(InputSource, this, TrackingState);
             }
         }
 
@@ -117,7 +112,7 @@ namespace RealityToolkit.Pico.InputService
             if (updatedControllerPose != Pose)
             {
                 Pose = updatedControllerPose;
-                InputSystem?.RaiseSourcePoseChanged(InputSource, this, Pose);
+                InputService?.RaiseSourcePoseChanged(InputSource, this, Pose);
             }
         }
 
@@ -132,9 +127,9 @@ namespace RealityToolkit.Pico.InputService
         /// <summary>
         /// Updates the controller's <see cref="DeviceInputType.ButtonPress"/> mappings.
         /// </summary>
-        /// <param name="interactionMapping">The <see cref="MixedRealityInteractionMapping"/> to update.</param>
+        /// <param name="interactionMapping">The <see cref="InteractionMapping"/> to update.</param>
         /// <param name="inputDevice">The <see cref="InputDevice"/> data is read from.</param>
-        protected virtual void UpdateDigitalInteractionMapping(MixedRealityInteractionMapping interactionMapping, InputDevice inputDevice)
+        protected virtual void UpdateDigitalInteractionMapping(InteractionMapping interactionMapping, InputDevice inputDevice)
         {
             Debug.Assert(interactionMapping.AxisType == AxisType.Digital);
 
@@ -150,9 +145,9 @@ namespace RealityToolkit.Pico.InputService
         /// <summary>
         /// Updates the controller's <see cref="DeviceInputType.ThumbStick"/> mappings.
         /// </summary>
-        /// <param name="interactionMapping">The <see cref="MixedRealityInteractionMapping"/> to update.</param>
+        /// <param name="interactionMapping">The <see cref="InteractionMapping"/> to update.</param>
         /// <param name="inputDevice">The <see cref="InputDevice"/> data is read from.</param>
-        protected virtual void UpdateSingleAxisInteractionMapping(MixedRealityInteractionMapping interactionMapping, InputDevice inputDevice)
+        protected virtual void UpdateSingleAxisInteractionMapping(InteractionMapping interactionMapping, InputDevice inputDevice)
         {
             Debug.Assert(interactionMapping.AxisType == AxisType.SingleAxis);
 
@@ -171,9 +166,9 @@ namespace RealityToolkit.Pico.InputService
         /// <summary>
         /// Updates the controller's <see cref="DeviceInputType.ThumbStick"/> mappings.
         /// </summary>
-        /// <param name="interactionMapping">The <see cref="MixedRealityInteractionMapping"/> to update.</param>
+        /// <param name="interactionMapping">The <see cref="InteractionMapping"/> to update.</param>
         /// <param name="inputDevice">The <see cref="InputDevice"/> data is read from.</param>
-        protected virtual void UpdateDualAxisInteractionMapping(MixedRealityInteractionMapping interactionMapping, InputDevice inputDevice)
+        protected virtual void UpdateDualAxisInteractionMapping(InteractionMapping interactionMapping, InputDevice inputDevice)
         {
             Debug.Assert(interactionMapping.AxisType == AxisType.DualAxis);
 
@@ -193,7 +188,7 @@ namespace RealityToolkit.Pico.InputService
         /// Updates the spatial pointer pose interaction mapping value.
         /// </summary>
         /// <param name="interactionMapping">The spatial pointer pose mapping.</param>
-        protected void UpdateSpatialPointer(MixedRealityInteractionMapping interactionMapping)
+        protected void UpdateSpatialPointer(InteractionMapping interactionMapping)
         {
             Debug.Assert(interactionMapping.AxisType == AxisType.SixDof);
             interactionMapping.PoseData = SpatialPointerPose;

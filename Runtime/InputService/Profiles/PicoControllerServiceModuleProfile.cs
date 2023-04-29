@@ -9,7 +9,7 @@ namespace RealityToolkit.Pico.InputService.Profiles
     /// <summary>
     /// Configuration profile for <see cref="InputService.PicoControllerServiceModule"/>.
     /// </summary>
-    public class PicoControllerServiceModuleProfile : BaseMixedRealityControllerServiceModuleProfile
+    public class PicoControllerServiceModuleProfile : BaseControllerServiceModuleProfile
     {
         /// <inheritdoc />
         public override ControllerDefinition[] GetDefaultControllerOptions()

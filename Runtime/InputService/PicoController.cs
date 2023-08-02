@@ -60,6 +60,8 @@ namespace RealityToolkit.Pico.InputService
             UpdateControllerPose();
             UpdateSpatialPointerPose();
             UpdateInteractionMappings();
+
+            base.UpdateController();
         }
 
         /// <summary>

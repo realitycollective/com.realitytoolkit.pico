@@ -18,7 +18,7 @@ namespace RealityToolkit.Pico.InputService
         public PicoG24KController() { }
 
         /// <inheritdoc />
-        public PicoG24KController(IControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
+        public PicoG24KController(IControllerServiceModule controllerDataProvider, TrackingState trackingState, Handedness controllerHandedness, ControllerProfile controllerMappingProfile)
             : base(controllerDataProvider, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";

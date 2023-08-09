@@ -18,7 +18,7 @@ namespace RealityToolkit.Pico.InputService
         public PicoNeo3Controller() { }
 
         /// <inheritdoc />
-        public PicoNeo3Controller(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
+        public PicoNeo3Controller(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerProfile controllerMappingProfile)
             : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";

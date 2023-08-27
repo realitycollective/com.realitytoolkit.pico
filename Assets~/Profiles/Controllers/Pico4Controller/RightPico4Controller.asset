@@ -15,7 +15,7 @@ MonoBehaviour:
   controllerType:
     reference: 7cd3ce74-425f-40b2-944a-7d575da7ec74
   handedness: 2
-  visualizationProfile: {fileID: 11400000, guid: 5ee67c77447ce88409a3e04e57806963, type: 2}
+  controllerPrefab: {fileID: 5755866970998503659, guid: 01b33316b0f0263408764159a56c4369, type: 3}
   useCustomInteractions: 0
   interactionMappingProfiles:
   - {fileID: 11400000, guid: e28a7a4ae794140438af19e796f00a78, type: 2}
@@ -28,6 +28,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a02ca137f2c91c49b2e41248afb74c8, type: 2}
   - {fileID: 11400000, guid: 58d1bf6a7626f0147969d5572bee843d, type: 2}
   - {fileID: 11400000, guid: 823b2264256861e4fbf666167def1b02, type: 2}
+  controllerInteractors:
+  - {fileID: 3487613484555030544, guid: eb885e83bbe8cc24a87d61670583a82d, type: 3}
+  - {fileID: 2507312044101632756, guid: 54d78dc3333741c5b7f30fe3506096ba, type: 3}
+  - {fileID: 8432135464014371632, guid: c61f3eb595c636c438edf4452a4ef65e, type: 3}
   lightThemeLeftControllerTexture: {fileID: 0}
   lightThemeLeftControllerTextureScaled: {fileID: 0}
   darkThemeLeftControllerTexture: {fileID: 0}

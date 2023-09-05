@@ -22,7 +22,7 @@ namespace RealityToolkit.Pico.InputService
         public PicoController() { }
 
         /// <inheritdoc />
-        public PicoController(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerMappingProfile controllerMappingProfile)
+        public PicoController(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerProfile controllerMappingProfile)
             : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         /// <summary>

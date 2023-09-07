@@ -7,6 +7,7 @@ using RealityToolkit.CameraService.Modules;
 using RealityToolkit.Pico.CameraService.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;
+using FoveatedRenderingMode = Unity.XR.PXR.FoveatedRenderingMode;
 
 namespace RealityToolkit.Pico.CameraService
 {
@@ -22,10 +23,12 @@ namespace RealityToolkit.Pico.CameraService
             : base(name, priority, profile, parentService)
         {
             foveationLevel = profile.FoveationLevel;
+            foveatedRenderingMode = profile.FoveatedRenderingMode;
             cameraService = parentService;
         }
 
         private readonly FoveationLevel foveationLevel;
+        private readonly FoveatedRenderingMode foveatedRenderingMode;
         private readonly ICameraService cameraService;
 
         /// <inheritdoc />
@@ -34,10 +37,8 @@ namespace RealityToolkit.Pico.CameraService
             base.Initialize();
 
             PXR_Plugin.System.UPxr_SetSecure(PXR_ProjectSetting.GetProjectConfig().useContentProtect);
-            PXR_Plugin.PlatformSetting.UPxr_BindVerifyService(cameraService.CameraRig.RigTransform.gameObject.name);
             cameraService.CameraRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
-
-            PXR_FoveationRendering.SetFoveationLevel(foveationLevel);
+            PXR_FoveationRendering.SetFoveationLevel(foveationLevel, foveatedRenderingMode == FoveatedRenderingMode.EyeTrackedFoveatedRendering);
         }
     }
 }

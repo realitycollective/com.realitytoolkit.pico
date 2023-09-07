@@ -20,5 +20,14 @@ namespace RealityToolkit.Pico.CameraService.Profiles
         /// The rendering foveation level to use.
         /// </summary>
         public FoveationLevel FoveationLevel => foveationLevel;
+
+        [SerializeField]
+        [Tooltip("The foveation rendering mode.")]
+        private FoveatedRenderingMode foveatedRenderingMode = FoveatedRenderingMode.FixedFoveatedRendering;
+
+        /// <summary>
+        /// The foveation rendering mode.
+        /// </summary>
+        public FoveatedRenderingMode FoveatedRenderingMode => foveatedRenderingMode;
     }
 }

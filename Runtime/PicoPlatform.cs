@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Management;
 
-#if UNITY_EDITOR && !PICO_XR_LEGACY && PICO_XR_LP
+#if UNITY_EDITOR && PICO_XR_LP
 using Unity.XR.PICO.LivePreview;
 #else
 using Unity.XR.PXR;
@@ -24,18 +24,14 @@ namespace RealityToolkit.Pico
     [System.Runtime.InteropServices.Guid("91d05795-d44e-4a4d-8055-e770b592137f")]
     public class PicoPlatform : BasePlatform
     {
-        // Subsystem descriptor IDs have changed in between Pico SDK v1 and v2.
-#if PICO_XR_LEGACY
-        private const string xrDisplaySubsystemDescriptorId = "PicoXR Display";
-        private const string xrInputSubsystemDescriptorId = "PicoXR Input";
-#else
+#if !UNITY_EDITOR || !PICO_XR_LP
         private const string xrDisplaySubsystemDescriptorId = "PICO Display";
         private const string xrInputSubsystemDescriptorId = "PICO Input";
 #endif
 
         // When in editor and the live preview package is available, we are looking for a different
         // loader type and also different descriptors.
-#if UNITY_EDITOR && !PICO_XR_LEGACY && PICO_XR_LP
+#if UNITY_EDITOR && PICO_XR_LP
         private const string xrLivePreviewDisplaySubsystemDescriptorId = "PICO LP Display";
         private const string xrLivePreviewInputSubsystemDescriptorId = "PICO LP Input";
 
@@ -68,7 +64,7 @@ namespace RealityToolkit.Pico
                 // When in editor and the live preview package is available,
                 // we must look for different descriptor IDs to determine platfrom availability.
                 // If not in editor or no live preview package available, just use the runtime player build descriptors.
-#if UNITY_EDITOR && !PICO_XR_LEGACY && PICO_XR_LP
+#if UNITY_EDITOR && PICO_XR_LP
                 var displaySubsystemDescriptorId = xrLivePreviewDisplaySubsystemDescriptorId;
                 var inputSubsystemDescriptorId = xrLivePreviewInputSubsystemDescriptorId;
 #else

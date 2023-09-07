@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "com.realitytoolkit.core": "1.0.0-pre.18",
-    "com.realitytoolkit.camera": "1.0.1-pre.5"
+    "com.realitytoolkit.camera": "1.0.1-pre.5",
+    "com.unity.xr.picoxr": "2.3.4"
   },
   "assets": [
     {

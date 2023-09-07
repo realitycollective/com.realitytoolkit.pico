@@ -22,11 +22,6 @@
     "defineConstraints": [],
     "versionDefines": [
         {
-            "name": "com.unity.xr.picoxr",
-            "expression": "[1.0,2.0.7]",
-            "define": "PICO_XR_LEGACY"
-        },
-        {
             "name": "com.unity.pico.livepreview",
             "expression": "1.0.0",
             "define": "PICO_XR_LP"

@@ -12,14 +12,14 @@ using FoveatedRenderingMode = Unity.XR.PXR.FoveatedRenderingMode;
 namespace RealityToolkit.Pico.PlayerService
 {
     /// <summary>
-    /// <see cref="ICameraSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
+    /// <see cref="IPlayerSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
     /// </summary>
     [RuntimePlatform(typeof(PicoPlatform))]
     [System.Runtime.InteropServices.Guid("01f7685f-40a4-49c1-b0cf-8d17dee1fb2b")]
-    public class PicoCameraRigServiceModule : BaseCameraRigServiceModule, IPicoCameraRigServiceModule
+    public class PicoPlayerRigServiceModule : BasePlayerRigServiceModule, IPicoPlayerRigServiceModule
     {
         /// <inheritdoc />
-        public PicoCameraRigServiceModule(string name, uint priority, PicoCameraRigServiceModuleProfile profile, IPlayerService parentService)
+        public PicoPlayerRigServiceModule(string name, uint priority, PicoPlayerRigServiceModuleProfile profile, IPlayerService parentService)
             : base(name, priority, profile, parentService)
         {
             foveationLevel = profile.FoveationLevel;
@@ -37,7 +37,7 @@ namespace RealityToolkit.Pico.PlayerService
             base.Initialize();
 
             PXR_Plugin.System.UPxr_SetSecure(PXR_ProjectSetting.GetProjectConfig().useContentProtect);
-            PlayerService.CameraRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
+            PlayerService.PlayerRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
             PXR_FoveationRendering.SetFoveationLevel(foveationLevel, foveatedRenderingMode == FoveatedRenderingMode.EyeTrackedFoveatedRendering);
         }
     }

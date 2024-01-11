@@ -8,9 +8,9 @@ using UnityEngine;
 namespace RealityToolkit.Pico.PlayerService.Profiles
 {
     /// <summary>
-    /// Configuration profile for <see cref="PicoCameraRigServiceModule"/>.
+    /// Configuration profile for <see cref="PicoPlayerRigServiceModule"/>.
     /// </summary>
-    public class PicoCameraRigServiceModuleProfile : BaseCameraRigServiceModuleProfile
+    public class PicoPlayerRigServiceModuleProfile : BasePlayerRigServiceModuleProfile
     {
         [SerializeField]
         [Tooltip("The rendering foveation level to use.")]

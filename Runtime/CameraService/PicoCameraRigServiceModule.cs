@@ -2,14 +2,14 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityCollective.ServiceFramework.Attributes;
-using RealityToolkit.CameraService.Interfaces;
-using RealityToolkit.CameraService.Modules;
-using RealityToolkit.Pico.CameraService.Profiles;
+using RealityToolkit.PlayerService.Interfaces;
+using RealityToolkit.PlayerService.Modules;
+using RealityToolkit.Pico.PlayerService.Profiles;
 using Unity.XR.PXR;
 using UnityEngine;
 using FoveatedRenderingMode = Unity.XR.PXR.FoveatedRenderingMode;
 
-namespace RealityToolkit.Pico.CameraService
+namespace RealityToolkit.Pico.PlayerService
 {
     /// <summary>
     /// <see cref="ICameraSystem"/> service module used when running on the <see cref="PicoPlatform"/>.
@@ -19,17 +19,17 @@ namespace RealityToolkit.Pico.CameraService
     public class PicoCameraRigServiceModule : BaseCameraRigServiceModule, IPicoCameraRigServiceModule
     {
         /// <inheritdoc />
-        public PicoCameraRigServiceModule(string name, uint priority, PicoCameraRigServiceModuleProfile profile, ICameraService parentService)
+        public PicoCameraRigServiceModule(string name, uint priority, PicoCameraRigServiceModuleProfile profile, IPlayerService parentService)
             : base(name, priority, profile, parentService)
         {
             foveationLevel = profile.FoveationLevel;
             foveatedRenderingMode = profile.FoveatedRenderingMode;
-            cameraService = parentService;
+            PlayerService = parentService;
         }
 
         private readonly FoveationLevel foveationLevel;
         private readonly FoveatedRenderingMode foveatedRenderingMode;
-        private readonly ICameraService cameraService;
+        private readonly IPlayerService PlayerService;
 
         /// <inheritdoc />
         public override void Initialize()
@@ -37,7 +37,7 @@ namespace RealityToolkit.Pico.CameraService
             base.Initialize();
 
             PXR_Plugin.System.UPxr_SetSecure(PXR_ProjectSetting.GetProjectConfig().useContentProtect);
-            cameraService.CameraRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
+            PlayerService.CameraRig.RigCamera.depthTextureMode = DepthTextureMode.Depth;
             PXR_FoveationRendering.SetFoveationLevel(foveationLevel, foveatedRenderingMode == FoveatedRenderingMode.EyeTrackedFoveatedRendering);
         }
     }

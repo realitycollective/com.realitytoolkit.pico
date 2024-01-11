@@ -28,7 +28,7 @@ This package enables your Reality Toolkit based project to run on PICO devices.
 ## Requirements
 
 - [RealityToolkit.Core](https://github.com/realitycollective/com.realitytoolkit.core)
-- [RealityToolkit.Camera](https://github.com/realitycollective/com.realitytoolkit.camera)
+- [RealityToolkit.Camera](https://github.com/realitycollective/com.realitytoolkit.player)
 - [Unity 2020.3 and above](https://unity.com/)
 - [PICO Unity Integration SDK](https://developer-global.pico-interactive.com/sdk?deviceId=1&platformId=1&itemId=12)
 - [OpenUPM](https://openupm.com/docs/)

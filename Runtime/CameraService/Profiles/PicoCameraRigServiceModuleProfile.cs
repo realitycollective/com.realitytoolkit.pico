@@ -1,11 +1,11 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using RealityToolkit.CameraService.Definitions;
+using RealityToolkit.PlayerService.Definitions;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.CameraService.Profiles
+namespace RealityToolkit.Pico.PlayerService.Profiles
 {
     /// <summary>
     /// Configuration profile for <see cref="PicoCameraRigServiceModule"/>.

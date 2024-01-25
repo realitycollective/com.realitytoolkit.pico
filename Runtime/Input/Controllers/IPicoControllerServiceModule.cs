@@ -3,7 +3,7 @@
 
 using RealityToolkit.Input.Interfaces.Modules;
 
-namespace RealityToolkit.Pico.Input
+namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
     /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IControllerServiceModule"/>.

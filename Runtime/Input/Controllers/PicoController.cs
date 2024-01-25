@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace RealityToolkit.Pico.Input
+namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
     /// Base implementation for controllers on the <see cref="PicoPlatform"/>.

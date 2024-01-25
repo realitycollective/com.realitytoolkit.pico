@@ -2,9 +2,9 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityCollective.ServiceFramework.Attributes;
-using RealityToolkit.PlayerService.Interfaces;
-using RealityToolkit.PlayerService.Modules;
 using RealityToolkit.Pico.PlayerService.Profiles;
+using RealityToolkit.Player.Interfaces;
+using RealityToolkit.Player.Modules;
 using Unity.XR.PXR;
 using UnityEngine;
 using FoveatedRenderingMode = Unity.XR.PXR.FoveatedRenderingMode;

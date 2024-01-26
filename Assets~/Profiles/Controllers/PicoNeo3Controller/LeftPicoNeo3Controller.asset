@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d420c170b42dfe0438e2aa2a829775ed, type: 3}
+  m_Name: LeftPicoNeo3Controller
+  m_EditorClassIdentifier: 
+  controllerType:
+    reference: a58f0550-e847-483e-9e5c-0119a7098530
+  handedness: 1
+  controllerPrefab: {fileID: 2890383340010870617, guid: da54ec7ad266fde45b825accb4a69b21, type: 3}
+  useCustomInteractions: 0
+  interactionMappingProfiles:
+  - {fileID: 11400000, guid: 520cb52e91ce83741928e02def9c4436, type: 2}
+  - {fileID: 11400000, guid: 581f9928f1a03c94881d59099ab7e110, type: 2}
+  - {fileID: 11400000, guid: 86fd147d5a8e1fa4c8bddf4c725c9147, type: 2}
+  - {fileID: 11400000, guid: 02190c841983969409674510138bc103, type: 2}
+  - {fileID: 11400000, guid: c433eac95bb616e4d925cd19d880cf11, type: 2}
+  - {fileID: 11400000, guid: 92bc7db62fdc08643b4d94c0690e1ef4, type: 2}
+  - {fileID: 11400000, guid: 32b98f01cf1076d4db50da564e534cfb, type: 2}
+  - {fileID: 11400000, guid: 459858e96a4866d45a4684ddb95cd26e, type: 2}
+  - {fileID: 11400000, guid: 51ccfc3d79b458e44bad9a51a0bd882c, type: 2}
+  - {fileID: 11400000, guid: 3af2e994543b84549a4b70f8216a6bdb, type: 2}
+  controllerInteractors:
+  - {fileID: 3487613484555030544, guid: eb885e83bbe8cc24a87d61670583a82d, type: 3}
+  - {fileID: 2507312044101632756, guid: 54d78dc3333741c5b7f30fe3506096ba, type: 3}
+  - {fileID: 8432135464014371632, guid: c61f3eb595c636c438edf4452a4ef65e, type: 3}
+  lightThemeLeftControllerTexture: {fileID: 0}
+  lightThemeLeftControllerTextureScaled: {fileID: 0}
+  darkThemeLeftControllerTexture: {fileID: 0}
+  darkThemeLeftControllerTextureScaled: {fileID: 0}
+  lightThemeRightControllerTexture: {fileID: 0}
+  lightThemeRightControllerTextureScaled: {fileID: 0}
+  darkThemeRightControllerTexture: {fileID: 0}
+  darkThemeRightControllerTextureScaled: {fileID: 0}

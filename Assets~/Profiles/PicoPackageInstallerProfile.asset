@@ -18,7 +18,7 @@ MonoBehaviour:
   configurations:
   - instancedType:
       reference: 01f7685f-40a4-49c1-b0cf-8d17dee1fb2b
-    name: Pico Camera Rig Service Module
+    name: Pico Player Rig Service Module
     priority: 0
     profile: {fileID: 11400000, guid: 180d48ab9a306fa4f8fccb465ad411fa, type: 2}
     platformEntries:

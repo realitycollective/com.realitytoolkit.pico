@@ -14,21 +14,21 @@ namespace RealityToolkit.Pico.Editor
     [InitializeOnLoad]
     internal static class PicoPackageInstaller
     {
-        private static readonly string destinationPath = $"{MixedRealityPreferences.ProfileGenerationPath}Pico";
-        private static readonly string sourcePath = Path.GetFullPath($"{PathFinderUtility.ResolvePath<IPathFinder>(typeof(PicoPackagePathFinder)).ForwardSlashes()}{Path.DirectorySeparatorChar}{MixedRealityPreferences.HIDDEN_PACKAGE_ASSETS_PATH}");
+        private static readonly string destinationPath = $"{RealityToolkitPreferences.ProfileGenerationPath}Pico";
+        private static readonly string sourcePath = Path.GetFullPath($"{PathFinderUtility.ResolvePath<IPathFinder>(typeof(PicoPackagePathFinder)).ForwardSlashes()}{Path.DirectorySeparatorChar}{RealityToolkitPreferences.HIDDEN_PACKAGE_ASSETS_PATH}");
 
         static PicoPackageInstaller()
         {
             EditorApplication.delayCall += CheckPackage;
         }
 
-        [MenuItem(MixedRealityPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...", true)]
+        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...", true)]
         private static bool ImportPackageAssetsValidation()
         {
             return !Directory.Exists($"{destinationPath}{Path.DirectorySeparatorChar}");
         }
 
-        [MenuItem(MixedRealityPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...")]
+        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install Pico Package Assets...")]
         private static void ImportPackageAssets()
         {
             EditorPreferences.Set($"{nameof(PicoPackageInstaller)}.Assets", false);

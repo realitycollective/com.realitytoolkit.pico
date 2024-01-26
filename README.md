@@ -1,44 +1,36 @@
 # Reality Toolkit - PICO
 
-![GitHub](https://user-images.githubusercontent.com/9565734/198220057-d90bcfc5-9b5e-43e4-a9a6-c5ac3ba946a5.png)
+![com.realitytoolkit.pico](https://github.com/realitycollective/realitycollective.logo/blob/main/RealityToolkit/RepoBanners/com.realitytoolkit.pico.png?raw=true)
 
-The [PICO](https://www.picoxr.com/) platform components for the [Reality Toolkit](https://github.com/realitycollective/com.realitytoolkit.core).
-This package enables your Reality Toolkit based project to run on PICO devices.
+The PICO platform components for the Reality Toolkit. This package enables your [Reality Toolkit](https://www.realitytoolkit.io/) based project to run on PICO devices.
 
-[![openupm](https://img.shields.io/npm/v/com.realitytoolkit.pico?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.realitytoolkit.pico/)
-[![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/hF7TtRCFmB)
+[![openupm](https://img.shields.io/npm/v/com.realitytoolkit.pico?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.realitytoolkit.pico/) [![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/hF7TtRCFmB)
 [![Publish main branch and increment version](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/main-publish.yml)
 [![Publish development branch on Merge](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-publish.yml)
 [![Build and test UPM packages for platforms, all branches except main](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.pico/actions/workflows/development-buildandtestupmrelease.yml)
 
-## What is included?
+## Installation
 
-- Service modules for the Reality Toolkit's Player Service
-- Service modules for the Reality Toolkit's Input Service
+Make sure to always use the same source for all toolkit modules. Avoid using different installation sources within the same project. We provide the following ways to install Reality Toolkit modules:
 
-## Supported Devices
+### Method 1: Using Package Manager for git users
 
-- PICO Neo 3 Pro
-- PICO Neo 3 Link
-- PICO Neo 3 Pro Eye
-- PICO 4
-- PICO 4 Pro
-- PICO 4 Enterprise
+1. Open the Package Manager using the Window menu -> Package Manager
 
-## Requirements
+2. Inside the Package Manager, click on the "+" button on the top left and select "Add package from git URL..."
 
-- [RealityToolkit.Core](https://github.com/realitycollective/com.realitytoolkit.core)
-- [RealityToolkit.Player](https://github.com/realitycollective/com.realitytoolkit.player)
-- [Unity 2020.3 and above](https://unity.com/)
-- [PICO Unity Integration SDK](https://developer-global.pico-interactive.com/sdk?deviceId=1&platformId=1&itemId=12)
-- [OpenUPM](https://openupm.com/docs/)
+3. Input the following URL: https://github.com/realitycollective/com.realitytoolkit.pico.git and click "Add".
 
-## Getting Started
-
-Import the [PICO Unity Integration SDK](https://developer-global.pico-interactive.com/sdk?deviceId=1&platformId=1&itemId=12) to your project and then install the PICO module for the toolkit using:
+### Method 2: OpenUPM
 
 ```text
     openupm add com.realitytoolkit.pico
 ```
 
-If you already have an instance of the Reality Toolkit in your scene, then installing this package will automatically add the PICO modules to your configuration profile.
+### Method 3: Unity Asset Store
+
+This option will be available soon.
+
+## Getting Started
+
+Check the ["Getting Started"](https://www.realitytoolkit.io/) documentation for the Reality Toolkit and to learn more about this module.

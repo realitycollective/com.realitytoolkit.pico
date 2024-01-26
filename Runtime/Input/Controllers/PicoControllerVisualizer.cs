@@ -5,7 +5,7 @@ using RealityToolkit.Input.Controllers;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.Input
+namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
     /// Visualizers Pico controllers using the integration package's prefabs.

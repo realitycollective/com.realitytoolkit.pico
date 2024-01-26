@@ -4,7 +4,7 @@
 using RealityCollective.Definitions.Utilities;
 using RealityToolkit.Definitions.Controllers;
 
-namespace RealityToolkit.Pico.Input.Profiles
+namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
     /// Configuration profile for <see cref="InputService.PicoControllerServiceModule"/>.

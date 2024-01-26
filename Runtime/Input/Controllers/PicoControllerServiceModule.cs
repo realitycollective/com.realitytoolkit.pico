@@ -6,13 +6,12 @@ using RealityCollective.ServiceFramework.Attributes;
 using RealityToolkit.Definitions.Devices;
 using RealityToolkit.Input.Controllers;
 using RealityToolkit.Input.Interfaces;
-using RealityToolkit.Pico.Input.Profiles;
 using System;
 using System.Collections.Generic;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.Input
+namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
     /// Manages active controllers when running on the <see cref="PicoPlatform"/>.

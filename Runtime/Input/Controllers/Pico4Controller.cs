@@ -9,16 +9,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace RealityToolkit.Pico.Input
+namespace RealityToolkit.Pico.Input.Controllers
 {
-    [System.Runtime.InteropServices.Guid("a58f0550-e847-483e-9e5c-0119a7098530")]
-    public class PicoNeo3Controller : PicoController
+    [System.Runtime.InteropServices.Guid("7cd3ce74-425f-40b2-944a-7d575da7ec74")]
+    public class Pico4Controller : PicoController
     {
         /// <inheritdoc />
-        public PicoNeo3Controller() { }
+        public Pico4Controller() { }
 
         /// <inheritdoc />
-        public PicoNeo3Controller(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerProfile controllerMappingProfile)
+        public Pico4Controller(IControllerServiceModule controllerServiceModule, TrackingState trackingState, Handedness controllerHandedness, ControllerProfile controllerMappingProfile)
             : base(controllerServiceModule, trackingState, controllerHandedness, controllerMappingProfile) { }
 
         private const string menuButtonInputName = "Menu";

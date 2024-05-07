@@ -2,11 +2,13 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityCollective.ServiceFramework.Attributes;
+using RealityToolkit.Player;
+using RealityToolkit.Player.Rigs;
 using Unity.XR.PXR;
 using UnityEngine;
 using FoveatedRenderingMode = Unity.XR.PXR.FoveatedRenderingMode;
 
-namespace RealityToolkit.Pico.Player
+namespace RealityToolkit.Pico.Player.Rigs
 {
     /// <summary>
     /// <see cref="IPlayerSystem"/> service module used when running on the <see cref="PicoPlatform"/>.

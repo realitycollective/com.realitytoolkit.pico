@@ -3,7 +3,7 @@
 
 using RealityToolkit.Player.Rigs;
 
-namespace RealityToolkit.Pico.Player
+namespace RealityToolkit.Pico.Player.Rigs
 {
     /// <summary>
     /// Fully qualifies the <see cref="PicoPlatform"/> specific implementation of <see cref="IPlayerRigServiceModule"/>.

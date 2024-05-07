@@ -5,7 +5,7 @@ using RealityToolkit.Player.Rigs;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.Player
+namespace RealityToolkit.Pico.Player.Rigs
 {
     /// <summary>
     /// Configuration profile for <see cref="PicoPlayerRigServiceModule"/>.

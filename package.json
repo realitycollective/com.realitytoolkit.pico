@@ -9,7 +9,7 @@
     "Mixed Reality"
   ],
   "version": "1.0.2-pre.8",
-  "unity": "2021.3",
+  "unity": "2022.3",
   "homepage": "https://github.com/realitycollective",
   "bugs": {
     "url": "https://github.com/realitycollective/realitytoolkit.dev/issues"
@@ -25,9 +25,9 @@
     "url": "https://github.com/realitycollective"
   },
   "dependencies": {
-    "com.realitytoolkit.core": "1.0.0-pre.37",
-    "com.realitytoolkit.player": "1.0.3-pre.1",
-    "com.unity.xr.picoxr": "2.3.4"
+    "com.realitytoolkit.core": "1.0.0-pre.48",
+    "com.realitytoolkit.player": "1.0.4",
+    "com.unity.xr.picoxr": "2.5.0"
   },
   "assets": [
     {

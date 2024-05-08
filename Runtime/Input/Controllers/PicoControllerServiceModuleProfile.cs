@@ -7,7 +7,7 @@ using RealityToolkit.Input.Definitions;
 namespace RealityToolkit.Pico.Input.Controllers
 {
     /// <summary>
-    /// Configuration profile for <see cref="InputService.PicoControllerServiceModule"/>.
+    /// Configuration profile for <see cref="PicoControllerServiceModule"/>.
     /// </summary>
     public class PicoControllerServiceModuleProfile : BaseControllerServiceModuleProfile
     {

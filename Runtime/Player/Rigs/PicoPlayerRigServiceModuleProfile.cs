@@ -1,11 +1,11 @@
-// Copyright (c) Reality Collective. All rights reserved.
+﻿// Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using RealityToolkit.Player.Definitions;
+using RealityToolkit.Player.Rigs;
 using Unity.XR.PXR;
 using UnityEngine;
 
-namespace RealityToolkit.Pico.Player
+namespace RealityToolkit.Pico.Player.Rigs
 {
     /// <summary>
     /// Configuration profile for <see cref="PicoPlayerRigServiceModule"/>.

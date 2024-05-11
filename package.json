@@ -2,7 +2,7 @@
   "name": "com.realitytoolkit.pico",
   "displayName": "RealityToolkit.Pico",
   "description": "The PICO platform components for the Reality Toolkit. This package enables your Reality Toolkit based project to run on PICO devices.",
-  "version": "1.0.2-pre.8",
+  "version": "1.0.2-pre.9",
   "documentationUrl": "https://realitytoolkit.io",
   "changelogUrl": "https://github.com/realitycollective/com.realitytoolkit.pico/releases",
   "licensesUrl": "https://github.com/realitycollective/com.realitytoolkit.pico/blob/main/LICENSE.md",

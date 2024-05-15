@@ -53,7 +53,7 @@ namespace RealityToolkit.Pico.Input.Controllers
         }
 
         /// <inheritdoc />
-        public override void Disable() => RemoveAllControllers();
+        public override void Destroy() => RemoveAllControllers();
 
         private void UpdateController(Handedness handedness)
         {

@@ -33,4 +33,4 @@ This option will be available soon.
 
 ## Getting Started
 
-Check the ["Getting Started"](https://www.realitytoolkit.io/) documentation for the Reality Toolkit and to learn more about this module.
+Check the ["Getting Started"](https://realitytoolkit.realitycollective.net/) documentation for the Reality Toolkit and to learn more about this module.

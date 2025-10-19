@@ -1,4 +1,4 @@
-name: Publish main branch and increment version
+name: Publish Release
 
 on:
   push:

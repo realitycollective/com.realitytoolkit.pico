@@ -1,4 +1,4 @@
-name: Publish development branch on Merge
+name: Publish Preview Release
 
 on:
   push:

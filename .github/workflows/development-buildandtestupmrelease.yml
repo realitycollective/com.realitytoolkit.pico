@@ -16,6 +16,7 @@ concurrency:
 jobs:
   # Check Unity version required by the package
   validate-environment:
+    runs-on: [self-hosted, unity]
     name: Get Unity Version from UPM package
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/getunityversionfrompackage.yml@1.0.0
     with:
@@ -23,6 +24,7 @@ jobs:
 
   # Check Unity Hub and Editor Environment
   Validate-Unity:
+    runs-on: [self-hosted, unity]
     name: Validate Unity Install
     needs: validate-environment
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/validateunityinstall.yml@1.0.0
@@ -32,6 +34,7 @@ jobs:
 
   # Run Unity unit tests defined in the package
   Run-Unit-Tests:
+    runs-on: [self-hosted, unity]
     name: Run Unity Unit Tests
     needs: Validate-Unity
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/rununityUPMbuild.yml@1.0.0
@@ -41,7 +44,7 @@ jobs:
     secrets: inherit
 
   Build-Complete:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, unity]
     name: Build completion task
     needs: Run-Unit-Tests
     steps: 

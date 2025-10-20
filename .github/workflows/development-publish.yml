@@ -15,7 +15,7 @@ concurrency:
 jobs:
   release_on_merge:
     name: Tag and Publish UPM package
-    uses: realitycollective/reusableworkflows-reality-toolkit/blob/main/.github/workflows/upversionandtagrelease.yml@v2
+    uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@v2
     with:
       build-host: ubuntu-latest
       build-type: pre-release

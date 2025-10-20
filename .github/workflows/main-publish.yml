@@ -15,7 +15,7 @@ jobs:
     name: Get Version from UPM package
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/getpackageversionfrompackage.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
 
   # Perform tagging
   release-Package-only:
@@ -23,7 +23,7 @@ jobs:
     name: Release package only, no upversion
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/tagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       version: ${{ needs.validate-environment.outputs.packageversion }}
     secrets: inherit
 
@@ -33,7 +33,7 @@ jobs:
     name: Major Version package and release
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       build-type: major
     secrets: inherit
 
@@ -43,7 +43,7 @@ jobs:
     name: Minor Version package and release
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       build-type: minor
     secrets: inherit
 
@@ -53,7 +53,7 @@ jobs:
     name: Patch Version package and release
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       build-type: patch-release
     secrets: inherit
 
@@ -73,7 +73,7 @@ jobs:
     name: Refresh development branch
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/refreshbranch.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       target-branch: development
       source-branch: main
     secrets: inherit
@@ -85,7 +85,7 @@ jobs:
     name: UpVersion the development branch for the next release
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       build-type: patch
       target-branch: development
       createTag: false

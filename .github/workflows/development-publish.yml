@@ -17,6 +17,6 @@ jobs:
     name: Tag and Publish UPM package
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/upversionandtagrelease.yml@1.0.2
     with:
-      runs-on: self-hosted,windows,unity
+      runs-on: "[self-hosted, windows, unity]"
       build-type: pre-release
     secrets: inherit

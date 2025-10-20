@@ -19,7 +19,7 @@ jobs:
     name: Get Unity Version from UPM package
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/getunityversionfrompackage.yml@1.0.1
     with:
-      runs-on: self-hosted, windows, unity
+      runs-on: self-hosted, Windows, unity
 
   # Check Unity Hub and Editor Environment
   Validate-Unity:
@@ -27,7 +27,7 @@ jobs:
     needs: validate-environment
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/validateunityinstall.yml@1.0.1
     with:
-      runs-on: self-hosted, windows, unity
+      runs-on: self-hosted, Windows, unity
       unityversion: ${{ needs.validate-environment.outputs.unityversion }}
 
   # Run Unity unit tests defined in the package
@@ -36,7 +36,7 @@ jobs:
     needs: Validate-Unity
     uses: realitycollective/reusableworkflows-reality-toolkit/.github/workflows/rununityUPMbuild.yml@1.0.1
     with:
-      runs-on: self-hosted, windows, unity
+      runs-on: self-hosted, Windows, unity
       unityversion: ${{ needs.Validate-Unity.outputs.unityeditorversion }}
       dependencies: '[{"development": "github.com/realitycollective/com.realitytoolkit.core.git"},{"development": "github.com/realitycollective/com.realitytoolkit.player.git"},{"development": "github.com/realitycollective/com.realitycollective.utilities.git"},{"development": "github.com/realitycollective/com.realitytoolkit.service-framework.git"},{"main": "github.com/Pico-Developer/PICO-Unity-Integration-SDK.git"}]'
     secrets: inherit

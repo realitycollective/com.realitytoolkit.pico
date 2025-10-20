@@ -12,7 +12,7 @@
     "XR",
     "Mixed Reality"
   ],
-  "unity": "2022.3",
+  "unity": "6000.0",
   "homepage": "https://github.com/realitycollective",
   "bugs": {
     "url": "https://github.com/realitycollective/com.realitytoolkit.pico/issues"
